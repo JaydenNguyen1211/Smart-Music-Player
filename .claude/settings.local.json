@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"D:\\\\HuyAndroid\\\\RetroMusicPlayer\" -Directory)",
+      "Bash(Select-Object -ExpandProperty Name)",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\SmartMusicPlayer\\\\appthemehelper\" -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"D:\\\\SmartMusicPlayer\\\\appthemehelper\\\\\", \"\"\\) })",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\SmartMusicPlayer\\\\app\\\\src\\\\main\" -Recurse -ErrorAction SilentlyContinue | Select-Object FullName | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\SmartMusicPlayer\\\\app\\\\src\\\\main\\\\java\" -Recurse | Where-Object { $_.PSIsContainer -eq $false })",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\SmartMusicPlayer\\\\app\\\\src\\\\main\" -Recurse | Where-Object { -not $_.PSIsContainer } | Select-Object FullName)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(Select-String -Path \"D:\\\\SmartMusicPlayer\\\\app\\\\src\\\\main\\\\AndroidManifest.xml\" -Pattern \"MainActivity\" | ForEach-Object { $_.Line.Trim\\(\\) })",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\HuyAndroid\\\\RetroMusicPlayer\\\\app\\\\src\\\\main\\\\java\\\\code\\\\name\\\\monkey\\\\retromusic\" -File | Where-Object {$_.Extension -in '.kt', '.java'} | Measure-Object | Select-Object -ExpandProperty Count)",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\HuyAndroid\\\\RetroMusicPlayer\\\\app\\\\src\\\\main\\\\java\\\\code\\\\name\\\\monkey\\\\retromusic\" -File -Force | ForEach-Object { $_.Name })",
+      "Bash(Get-ChildItem -Path \"D:\\\\SmartMusicPlayer\" -Recurse -Directory -Filter \"res\")",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Get-ChildItem -Path \"D:\\\\SmartMusicPlayer\\\\app\\\\src\\\\main\\\\java\" -Directory)"
+    ]
+  }
+}

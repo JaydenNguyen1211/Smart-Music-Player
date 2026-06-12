@@ -13,7 +13,10 @@
       "PowerShell(Get-ChildItem -Path \"D:\\\\HuyAndroid\\\\RetroMusicPlayer\\\\app\\\\src\\\\main\\\\java\\\\code\\\\name\\\\monkey\\\\retromusic\" -File -Force | ForEach-Object { $_.Name })",
       "Bash(Get-ChildItem -Path \"D:\\\\SmartMusicPlayer\" -Recurse -Directory -Filter \"res\")",
       "Bash(Select-Object -ExpandProperty FullName)",
-      "Bash(Get-ChildItem -Path \"D:\\\\SmartMusicPlayer\\\\app\\\\src\\\\main\\\\java\" -Directory)"
+      "Bash(Get-ChildItem -Path \"D:\\\\SmartMusicPlayer\\\\app\\\\src\\\\main\\\\java\" -Directory)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Android\\\\Android Studio1\\\\bin\\\\format.bat\" -help 2>&1 | Select-Object -First 30)",
+      "PowerShell($env:JAVA_HOME = \"C:\\\\Program Files\\\\Android\\\\Android Studio1\\\\jbr\"; & \"C:\\\\Program Files\\\\Android\\\\Android Studio1\\\\bin\\\\format.bat\" -help 2>&1 | Select-Object -First 10)",
+      "Bash(git rm *)"
     ]
   }
 }

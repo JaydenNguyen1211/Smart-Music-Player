@@ -45,7 +45,9 @@
       "Bash(grep -rnE \"R\\\\.drawable\\\\.logo\\([^_]|$\\)\" app/src)",
       "Bash(rm app/src/main/res/drawable/logo.xml)",
       "Bash(grep -rnE \"@drawable/logo\\([^_]|\\\\\"|<|$\\)|R\\\\.drawable\\\\.logo\\([^_]|$\\)\" app/src)",
-      "Bash(python -c \"import xml.etree.ElementTree as ET; ET.parse\\('menu_main.xml'\\); print\\('menu_main.xml: well-formed OK'\\)\")"
+      "Bash(python -c \"import xml.etree.ElementTree as ET; ET.parse\\('menu_main.xml'\\); print\\('menu_main.xml: well-formed OK'\\)\")",
+      "Bash(mkdir -p app/src/full)",
+      "Bash(cp -r app/src/fdroid/java app/src/full/java)"
     ]
   }
 }

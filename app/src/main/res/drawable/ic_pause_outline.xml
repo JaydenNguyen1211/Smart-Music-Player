@@ -2,15 +2,13 @@
     android:width="64dp"
     android:height="64dp"
     android:viewportWidth="24"
-    android:viewportHeight="24">
-  <path
-      android:strokeWidth="1.5"
-      android:pathData="M6.5,5.5h3v13h-3z"
-      android:fillColor="#00000000"
-      android:strokeColor="#000000" />
-  <path
-      android:strokeWidth="1.5"
-      android:pathData="M14.5,5.5h3v13h-3z"
-      android:fillColor="#00000000"
-      android:strokeColor="#000000" />
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal">
+    <path
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M6.0,4.0h4.0v16.0h-4.0Z M14.0,4.0h4.0v16.0h-4.0Z" />
 </vector>

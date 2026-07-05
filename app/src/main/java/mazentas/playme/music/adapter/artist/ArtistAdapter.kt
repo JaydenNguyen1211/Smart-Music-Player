@@ -27,10 +27,10 @@ import mazentas.playme.music.R
 import mazentas.playme.music.adapter.base.AbsMultiSelectAdapter
 import mazentas.playme.music.adapter.base.MediaEntryViewHolder
 import mazentas.playme.music.extensions.hide
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.artistImageOptions
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
-import mazentas.playme.music.glide.RetroMusicColoredTarget
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.artistImageOptions
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartMusicColoredTarget
 import mazentas.playme.music.helper.menu.SongsMenuHelper
 import mazentas.playme.music.interfaces.IAlbumArtistClickListener
 import mazentas.playme.music.interfaces.IArtistClickListener
@@ -114,9 +114,9 @@ class ArtistAdapter(
         Glide.with(activity)
             .asBitmapPalette()
             .artistImageOptions(artist)
-            .load(RetroGlideExtension.getArtistModel(artist))
-            .transition(RetroGlideExtension.getDefaultTransition())
-            .into(object : RetroMusicColoredTarget(holder.image!!) {
+            .load(SmartGlideExtension.getArtistModel(artist))
+            .transition(SmartGlideExtension.getDefaultTransition())
+            .into(object : SmartMusicColoredTarget(holder.image!!) {
                 override fun onColorReady(colors: MediaNotificationProcessor) {
                     setColors(colors, holder)
                 }

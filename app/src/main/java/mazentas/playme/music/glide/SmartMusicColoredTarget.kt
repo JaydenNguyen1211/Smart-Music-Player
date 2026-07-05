@@ -23,7 +23,7 @@ import mazentas.playme.music.glide.palette.BitmapPaletteWrapper
 import mazentas.playme.music.util.color.MediaNotificationProcessor
 import com.bumptech.glide.request.transition.Transition
 
-abstract class RetroMusicColoredTarget(view: ImageView) : BitmapPaletteTarget(view) {
+abstract class SmartMusicColoredTarget(view: ImageView) : BitmapPaletteTarget(view) {
 
     protected val defaultFooterColor: Int
         get() = getView().context.colorControlNormal()

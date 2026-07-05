@@ -102,6 +102,9 @@ class ArtistImageFetcher(
                 }
             } else {
                 null
+
+
+
             }
         }
     }

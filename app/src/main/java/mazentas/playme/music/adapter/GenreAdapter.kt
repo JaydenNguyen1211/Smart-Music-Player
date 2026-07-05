@@ -23,10 +23,10 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import mazentas.playme.music.R
 import mazentas.playme.music.databinding.ItemGenreBinding
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
-import mazentas.playme.music.glide.RetroGlideExtension.songCoverOptions
-import mazentas.playme.music.glide.RetroMusicColoredTarget
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartGlideExtension.songCoverOptions
+import mazentas.playme.music.glide.SmartMusicColoredTarget
 import mazentas.playme.music.interfaces.IGenreClickListener
 import mazentas.playme.music.model.Genre
 import mazentas.playme.music.util.MusicUtil
@@ -73,8 +73,8 @@ class GenreAdapter(
         Glide.with(activity)
             .asBitmapPalette()
             .songCoverOptions(genreSong)
-            .load(RetroGlideExtension.getSongModel(genreSong))
-            .into(object : RetroMusicColoredTarget(holder.binding.image) {
+            .load(SmartGlideExtension.getSongModel(genreSong))
+            .into(object : SmartMusicColoredTarget(holder.binding.image) {
                 override fun onColorReady(colors: MediaNotificationProcessor) {
                     setColors(holder, colors)
                 }

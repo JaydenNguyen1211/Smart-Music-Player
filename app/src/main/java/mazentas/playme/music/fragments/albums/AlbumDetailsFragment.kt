@@ -45,10 +45,10 @@ import mazentas.playme.music.dialogs.AddToPlaylistDialog
 import mazentas.playme.music.dialogs.DeleteSongsDialog
 import mazentas.playme.music.extensions.*
 import mazentas.playme.music.fragments.base.AbsMainActivityFragment
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.albumCoverOptions
-import mazentas.playme.music.glide.RetroGlideExtension.artistImageOptions
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.albumCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension.artistImageOptions
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
 import mazentas.playme.music.glide.SingleColorTarget
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.helper.SortOrder.AlbumSongSortOrder.Companion.SONG_A_Z
@@ -279,9 +279,9 @@ class AlbumDetailsFragment : AbsMainActivityFragment(R.layout.fragment_album_det
                 binding.fragmentAlbumContent.scrobblesLabel.show()
 
                 binding.fragmentAlbumContent.listeners.text =
-                    RetroUtil.formatValue(lastFmAlbum.album.listeners.toFloat())
+                    SmartUtil.formatValue(lastFmAlbum.album.listeners.toFloat())
                 binding.fragmentAlbumContent.scrobbles.text =
-                    RetroUtil.formatValue(lastFmAlbum.album.playcount.toFloat())
+                    SmartUtil.formatValue(lastFmAlbum.album.playcount.toFloat())
             }
         }
     }
@@ -293,7 +293,7 @@ class AlbumDetailsFragment : AbsMainActivityFragment(R.layout.fragment_album_det
         Glide.with(requireContext())
             //.forceDownload(PreferenceUtil.isAllowedToDownloadMetadata())
             .load(
-                RetroGlideExtension.getArtistModel(
+                SmartGlideExtension.getArtistModel(
                     artist,
                     PreferenceUtil.isAllowedToDownloadMetadata(requireContext())
                 )
@@ -309,7 +309,7 @@ class AlbumDetailsFragment : AbsMainActivityFragment(R.layout.fragment_album_det
             .asBitmapPalette()
             .albumCoverOptions(album.safeGetFirstSong())
             //.checkIgnoreMediaStore()
-            .load(RetroGlideExtension.getSongModel(album.safeGetFirstSong()))
+            .load(SmartGlideExtension.getSongModel(album.safeGetFirstSong()))
             .into(object : SingleColorTarget(binding.image) {
                 override fun onColorReady(color: Int) {
                     setColors(color)

@@ -15,18 +15,14 @@
 package mazentas.playme.music.activities
 
 import android.Manifest.permission.BLUETOOTH_CONNECT
-import android.app.AlarmManager
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.ColorStateList
 import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import androidx.activity.OnBackPressedCallback
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
-import androidx.core.content.getSystemService
-import androidx.core.net.toUri
 import androidx.core.text.parseAsHtml
 import androidx.core.view.isVisible
 import code.name.monkey.appthemehelper.util.VersionUtils
@@ -49,14 +45,6 @@ class PermissionActivity : AbsMusicServiceActivity() {
         binding.storagePermission.setButtonClick {
             requestPermissions()
         }
-        binding.audioPermission.show()
-        binding.audioPermission.setButtonClick {
-            if (!hasAudioPermission()) {
-                val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS)
-                intent.data = ("package:" + applicationContext.packageName).toUri()
-                startActivity(intent)
-            }
-        }
 
         if (VersionUtils.hasS()) {
             binding.bluetoothPermission.show()
@@ -67,13 +55,6 @@ class PermissionActivity : AbsMusicServiceActivity() {
                     BLUETOOTH_PERMISSION_REQUEST
                 )
             }
-            binding.alarmPermission.show()
-            binding.alarmPermission.setButtonClick {
-                val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM)
-                startActivity(intent)
-            }
-        } else {
-            binding.audioPermission.setNumber("2")
         }
 
         binding.finish.accentBackgroundColor()
@@ -102,7 +83,7 @@ class PermissionActivity : AbsMusicServiceActivity() {
         val appName =
             getString(
                 R.string.message_welcome,
-                "<b>Retro <span  style='color:$hexColor';>Music</span></b>"
+                "<b>Smart <span  style='color:$hexColor';>Music</span></b>"
             )
                 .parseAsHtml()
         binding.appNameText.text = appName
@@ -116,20 +97,10 @@ class PermissionActivity : AbsMusicServiceActivity() {
             binding.storagePermission.checkImage.imageTintList =
                 ColorStateList.valueOf(accentColor())
         }
-        if (hasAudioPermission()) {
-            binding.audioPermission.checkImage.isVisible = true
-            binding.audioPermission.checkImage.imageTintList =
-                ColorStateList.valueOf(accentColor())
-        }
         if (VersionUtils.hasS()) {
             if (hasBluetoothPermission()) {
                 binding.bluetoothPermission.checkImage.isVisible = true
                 binding.bluetoothPermission.checkImage.imageTintList =
-                    ColorStateList.valueOf(accentColor())
-            }
-            if (hasAlarmPermission()) {
-                binding.alarmPermission.checkImage.isVisible = true
-                binding.alarmPermission.checkImage.imageTintList =
                     ColorStateList.valueOf(accentColor())
             }
         }
@@ -147,13 +118,4 @@ class PermissionActivity : AbsMusicServiceActivity() {
         ) == PackageManager.PERMISSION_GRANTED
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
-    private fun hasAudioPermission(): Boolean {
-        return Settings.System.canWrite(this)
-    }
-
-    @RequiresApi(Build.VERSION_CODES.S)
-    private fun hasAlarmPermission(): Boolean {
-        return getSystemService<AlarmManager>()?.canScheduleExactAlarms() == true
-    }
 }

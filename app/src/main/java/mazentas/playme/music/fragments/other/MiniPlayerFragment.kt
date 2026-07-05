@@ -31,13 +31,13 @@ import mazentas.playme.music.extensions.show
 import mazentas.playme.music.extensions.textColorPrimary
 import mazentas.playme.music.extensions.textColorSecondary
 import mazentas.playme.music.fragments.base.AbsMusicServiceFragment
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.songCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.songCoverOptions
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.helper.MusicProgressViewUpdateHelper
 import mazentas.playme.music.helper.PlayPauseButtonOnClickHandler
 import mazentas.playme.music.util.PreferenceUtil
-import mazentas.playme.music.util.RetroUtil
+import mazentas.playme.music.util.SmartUtil
 import com.bumptech.glide.Glide
 import kotlin.math.abs
 
@@ -69,7 +69,7 @@ open class MiniPlayerFragment : AbsMusicServiceFragment(R.layout.fragment_mini_p
     }
 
     fun setUpButtons() {
-        if (RetroUtil.isTablet) {
+        if (SmartUtil.isTablet) {
             binding.actionNext.show()
             binding.actionPrevious.show()
         } else {
@@ -115,8 +115,8 @@ open class MiniPlayerFragment : AbsMusicServiceFragment(R.layout.fragment_mini_p
     private fun updateSongCover() {
         val song = MusicPlayerRemote.currentSong
         Glide.with(requireContext())
-            .load(RetroGlideExtension.getSongModel(song))
-            .transition(RetroGlideExtension.getDefaultTransition())
+            .load(SmartGlideExtension.getSongModel(song))
+            .transition(SmartGlideExtension.getDefaultTransition())
             .songCoverOptions(song)
             .into(binding.image)
     }

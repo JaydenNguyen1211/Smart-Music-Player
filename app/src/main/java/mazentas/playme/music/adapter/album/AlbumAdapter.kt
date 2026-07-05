@@ -24,10 +24,10 @@ import androidx.fragment.app.FragmentActivity
 import mazentas.playme.music.R
 import mazentas.playme.music.adapter.base.AbsMultiSelectAdapter
 import mazentas.playme.music.adapter.base.MediaEntryViewHolder
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.albumCoverOptions
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
-import mazentas.playme.music.glide.RetroMusicColoredTarget
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.albumCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartMusicColoredTarget
 import mazentas.playme.music.helper.SortOrder
 import mazentas.playme.music.helper.menu.SongsMenuHelper
 import mazentas.playme.music.interfaces.IAlbumClickListener
@@ -116,8 +116,8 @@ open class AlbumAdapter(
             .asBitmapPalette()
             .albumCoverOptions(song)
             //.checkIgnoreMediaStore()
-            .load(RetroGlideExtension.getSongModel(song))
-            .into(object : RetroMusicColoredTarget(holder.image!!) {
+            .load(SmartGlideExtension.getSongModel(song))
+            .into(object : SmartMusicColoredTarget(holder.image!!) {
                 override fun onColorReady(colors: MediaNotificationProcessor) {
                     setColors(colors, holder)
                 }

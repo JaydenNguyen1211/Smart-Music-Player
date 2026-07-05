@@ -23,7 +23,7 @@ import mazentas.playme.music.extensions.accentOutlineColor
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.model.Song
 import mazentas.playme.music.util.PreferenceUtil
-import mazentas.playme.music.util.RetroUtil
+import mazentas.playme.music.util.SmartUtil
 import com.google.android.material.button.MaterialButton
 
 class ShuffleButtonSongAdapter(
@@ -58,7 +58,7 @@ class ShuffleButtonSongAdapter(
             }
         } else {
             super.onBindViewHolder(holder, position - 1)
-            val landscape = RetroUtil.isLandscape
+            val landscape = SmartUtil.isLandscape
             if ((PreferenceUtil.songGridSize > 2 && !landscape) || (PreferenceUtil.songGridSizeLand > 5 && landscape)) {
                 holder.menu?.isVisible = false
             }

@@ -28,7 +28,7 @@ import mazentas.playme.music.fragments.base.AbsRecyclerViewCustomGridSizeFragmen
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.helper.SortOrder.SongSortOrder
 import mazentas.playme.music.util.PreferenceUtil
-import mazentas.playme.music.util.RetroUtil
+import mazentas.playme.music.util.SmartUtil
 
 class SongsFragment : AbsRecyclerViewCustomGridSizeFragment<SongAdapter, GridLayoutManager>() {
 
@@ -137,7 +137,7 @@ class SongsFragment : AbsRecyclerViewCustomGridSizeFragment<SongAdapter, GridLay
     override fun onCreateMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateMenu(menu, inflater)
         val gridSizeItem: MenuItem = menu.findItem(R.id.action_grid_size)
-        if (RetroUtil.isLandscape) {
+        if (SmartUtil.isLandscape) {
             gridSizeItem.setTitle(R.string.action_grid_size_land)
         }
         setUpGridSizeMenu(gridSizeItem.subMenu!!)

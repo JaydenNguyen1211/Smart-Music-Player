@@ -3,7 +3,7 @@ package mazentas.playme.music.extensions
 import android.webkit.MimeTypeMap
 import androidx.core.net.toUri
 import mazentas.playme.music.model.Song
-import mazentas.playme.music.util.RetroUtil
+import mazentas.playme.music.util.SmartUtil
 import org.jaudiotagger.audio.AudioFileIO
 import java.io.File
 import java.net.URLEncoder
@@ -20,7 +20,7 @@ fun getSongInfo(song: Song): String {
                 string.append(audioHeader.bitsPerSample).append("-bit").append(" • ")
             }
             string.append(audioHeader.bitRate).append(" kb/s").append(" • ")
-            string.append(RetroUtil.frequencyCount(audioHeader.sampleRate.toInt()))
+            string.append(SmartUtil.frequencyCount(audioHeader.sampleRate.toInt()))
                 .append(" kHz")
             string.toString()
         } catch (er: Exception) {

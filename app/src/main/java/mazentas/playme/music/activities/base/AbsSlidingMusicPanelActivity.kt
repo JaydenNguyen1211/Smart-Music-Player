@@ -20,6 +20,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.ColorStateList
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
@@ -347,7 +348,7 @@ abstract class AbsSlidingMusicPanelActivity : AbsMusicServiceActivity(),
         navigationBarColorAnimator?.cancel()
         navigationBarColorAnimator = ValueAnimator
             .ofArgb(window.navigationBarColor, color).apply {
-                duration = ViewUtil.RETRO_MUSIC_ANIM_TIME.toLong()
+                duration = ViewUtil.SMART_MUSIC_ANIM_TIME.toLong()
                 interpolator = PathInterpolator(0.4f, 0f, 1f, 1f)
                 addUpdateListener { animation: ValueAnimator ->
                     setNavigationBarColorPreOreo(

@@ -9,7 +9,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="16dp"
-        app:cardCornerRadius="40dp"
+        app:cardCornerRadius="60dp"
         app:layout_constraintDimensionRatio="21:10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
                 android:background="@drawable/shadow_up"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
-            <mazentas.playme.music.views.RetroShapeableImageView
+            <mazentas.playme.music.views.SmartShapeableImageView
                 android:id="@+id/userImage"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
@@ -44,7 +44,7 @@
                 android:transitionName="user_image"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:retroCornerSize="21dp"
+                app:smartCornerSize="21dp"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <com.google.android.material.textview.MaterialTextView

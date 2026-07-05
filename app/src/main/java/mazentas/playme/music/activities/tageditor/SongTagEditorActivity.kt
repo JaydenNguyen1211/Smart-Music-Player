@@ -31,13 +31,13 @@ import code.name.monkey.appthemehelper.util.MaterialValueHelper
 import mazentas.playme.music.R
 import mazentas.playme.music.databinding.ActivitySongTagEditorBinding
 import mazentas.playme.music.extensions.*
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
 import mazentas.playme.music.glide.palette.BitmapPaletteWrapper
 import mazentas.playme.music.model.ArtworkInfo
 import mazentas.playme.music.repository.SongRepository
 import mazentas.playme.music.util.ImageUtil
 import mazentas.playme.music.util.MusicUtil
-import mazentas.playme.music.util.RetroColorUtil
+import mazentas.playme.music.util.SmartColorUtil
 import mazentas.playme.music.util.logD
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -111,8 +111,8 @@ class SongTagEditorActivity : AbsTagEditorActivity<ActivitySongTagEditorBinding>
         val bitmap = albumArt
         setImageBitmap(
             bitmap,
-            RetroColorUtil.getColor(
-                RetroColorUtil.generatePalette(bitmap),
+            SmartColorUtil.getColor(
+                SmartColorUtil.generatePalette(bitmap),
                 defaultFooterColor()
             )
         )
@@ -181,11 +181,11 @@ class SongTagEditorActivity : AbsTagEditorActivity<ActivitySongTagEditorBinding>
                     resource: BitmapPaletteWrapper,
                     transition: Transition<in BitmapPaletteWrapper>?
                 ) {
-                    RetroColorUtil.getColor(resource.palette, Color.TRANSPARENT)
+                    SmartColorUtil.getColor(resource.palette, Color.TRANSPARENT)
                     albumArtBitmap = resource.bitmap?.let { ImageUtil.resizeBitmap(it, 2048) }
                     setImageBitmap(
                         albumArtBitmap,
-                        RetroColorUtil.getColor(
+                        SmartColorUtil.getColor(
                             resource.palette,
                             defaultFooterColor()
                         )

@@ -31,7 +31,7 @@ import mazentas.playme.music.fragments.ReloadType
 import mazentas.playme.music.fragments.base.AbsRecyclerViewFragment
 import mazentas.playme.music.interfaces.IGenreClickListener
 import mazentas.playme.music.model.Genre
-import mazentas.playme.music.util.RetroUtil
+import mazentas.playme.music.util.SmartUtil
 import com.google.android.material.transition.MaterialSharedAxis
 
 class
@@ -48,7 +48,7 @@ GenresFragment : AbsRecyclerViewFragment<GenreAdapter, LinearLayoutManager>(),
     }
 
     override fun createLayoutManager(): LinearLayoutManager {
-        return if (RetroUtil.isLandscape) {
+        return if (SmartUtil.isLandscape) {
             GridLayoutManager(activity, 4)
         } else {
             GridLayoutManager(activity, 2)

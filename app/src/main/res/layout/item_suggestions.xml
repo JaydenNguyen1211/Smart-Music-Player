@@ -37,9 +37,9 @@
         app:cardCornerRadius="@dimen/m3_card_corner_radius"
         app:cardUseCompatPadding="true"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toStartOf="@id/card2"
+        app:layout_constraintStart_toEndOf="@id/card2"
         app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card6">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -57,9 +57,9 @@
         app:cardCornerRadius="@dimen/m3_card_corner_radius"
         app:cardUseCompatPadding="true"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toStartOf="@id/card3"
+        app:layout_constraintStart_toEndOf="@id/card3"
         app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toEndOf="@id/card1"
+        app:layout_constraintEnd_toStartOf="@id/card1"
         app:layout_constraintTop_toBottomOf="@id/card6">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -77,9 +77,9 @@
         app:cardCornerRadius="@dimen/m3_card_corner_radius"
         app:cardUseCompatPadding="true"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toStartOf="@id/card4"
+        app:layout_constraintStart_toEndOf="@id/card4"
         app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toEndOf="@id/card2"
+        app:layout_constraintEnd_toStartOf="@id/card2"
         app:layout_constraintTop_toBottomOf="@id/card6">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -97,9 +97,9 @@
         app:cardCornerRadius="@dimen/m3_card_corner_radius"
         app:cardUseCompatPadding="true"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toStartOf="@id/card5"
+        app:layout_constraintStart_toEndOf="@id/card5"
         app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toEndOf="@id/card3"
+        app:layout_constraintEnd_toStartOf="@id/card3"
         app:layout_constraintTop_toBottomOf="@id/card6">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -117,9 +117,9 @@
         app:cardCornerRadius="@dimen/m3_card_corner_radius"
         app:cardUseCompatPadding="true"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toEndOf="@id/card4"
+        app:layout_constraintEnd_toStartOf="@id/card4"
         app:layout_constraintTop_toBottomOf="@id/card6">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -141,9 +141,9 @@
         app:cardElevation="0dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toStartOf="@id/card7"
+        app:layout_constraintStart_toEndOf="@id/card7"
         app:layout_constraintHorizontal_weight="4"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title">
 
         <com.google.android.material.textview.MaterialTextView
@@ -168,9 +168,9 @@
         app:cardCornerRadius="@dimen/m3_card_corner_radius"
         app:cardUseCompatPadding="true"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toStartOf="@id/card8"
+        app:layout_constraintStart_toEndOf="@id/card8"
         app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toEndOf="@id/card6"
+        app:layout_constraintEnd_toStartOf="@id/card6"
         app:layout_constraintTop_toTopOf="@id/card6">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -188,9 +188,9 @@
         app:cardCornerRadius="@dimen/m3_card_corner_radius"
         app:cardUseCompatPadding="true"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_weight="4"
-        app:layout_constraintStart_toEndOf="@id/card7"
+        app:layout_constraintEnd_toStartOf="@id/card7"
         app:layout_constraintTop_toTopOf="@id/card7">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -207,9 +207,9 @@
         app:cardCornerRadius="@dimen/m3_card_corner_radius"
         app:cardUseCompatPadding="true"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toStartOf="@id/card8"
+        app:layout_constraintStart_toEndOf="@id/card8"
         app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toEndOf="@id/card6"
+        app:layout_constraintEnd_toStartOf="@id/card6"
         app:layout_constraintTop_toBottomOf="@id/card7">
 
         <androidx.appcompat.widget.AppCompatImageView

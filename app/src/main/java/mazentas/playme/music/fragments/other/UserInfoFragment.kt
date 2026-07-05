@@ -38,9 +38,9 @@ import mazentas.playme.music.extensions.accentColor
 import mazentas.playme.music.extensions.applyToolbar
 import mazentas.playme.music.extensions.showToast
 import mazentas.playme.music.fragments.LibraryViewModel
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.profileBannerOptions
-import mazentas.playme.music.glide.RetroGlideExtension.userProfileOptions
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.profileBannerOptions
+import mazentas.playme.music.glide.SmartGlideExtension.userProfileOptions
 import mazentas.playme.music.util.ImageUtil
 import mazentas.playme.music.util.PreferenceUtil.userName
 import com.bumptech.glide.Glide
@@ -159,13 +159,13 @@ class UserInfoFragment : Fragment() {
     private fun loadProfile() {
         binding.bannerImage.let {
             Glide.with(this)
-                .load(RetroGlideExtension.getBannerModel())
-                .profileBannerOptions(RetroGlideExtension.getBannerModel())
+                .load(SmartGlideExtension.getBannerModel())
+                .profileBannerOptions(SmartGlideExtension.getBannerModel())
                 .into(it)
         }
         Glide.with(this)
-            .load(RetroGlideExtension.getUserModel())
-            .userProfileOptions(RetroGlideExtension.getUserModel(), requireContext())
+            .load(SmartGlideExtension.getUserModel())
+            .userProfileOptions(SmartGlideExtension.getUserModel(), requireContext())
             .into(binding.userImage)
     }
 

@@ -14,20 +14,15 @@
  */
 package mazentas.playme.music.fragments.settings
 
-import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import code.name.monkey.appthemehelper.ThemeStore
-import mazentas.playme.music.App
 import mazentas.playme.music.R
 import mazentas.playme.music.databinding.FragmentMainSettingsBinding
 import mazentas.playme.music.extensions.drawAboveSystemBarsWithPadding
-import mazentas.playme.music.extensions.goToProVersion
 
 class MainSettingsFragment : Fragment(), View.OnClickListener {
 
@@ -43,9 +38,7 @@ class MainSettingsFragment : Fragment(), View.OnClickListener {
                 R.id.personalizeSettings -> R.id.action_mainSettingsFragment_to_personalizeSettingsFragment
                 R.id.imageSettings -> R.id.action_mainSettingsFragment_to_imageSettingFragment
                 R.id.otherSettings -> R.id.action_mainSettingsFragment_to_otherSettingsFragment
-                R.id.aboutSettings -> R.id.action_mainSettingsFragment_to_aboutActivity
                 R.id.nowPlayingSettings -> R.id.action_mainSettingsFragment_to_nowPlayingSettingsFragment
-                R.id.backup_restore_settings -> R.id.action_mainSettingsFragment_to_backupFragment
                 else -> R.id.action_mainSettingsFragment_to_themeSettingsFragment
             }
         )
@@ -69,22 +62,6 @@ class MainSettingsFragment : Fragment(), View.OnClickListener {
         binding.personalizeSettings.setOnClickListener(this)
         binding.imageSettings.setOnClickListener(this)
         binding.otherSettings.setOnClickListener(this)
-        binding.aboutSettings.setOnClickListener(this)
-        binding.backupRestoreSettings.setOnClickListener(this)
-
-        binding.buyProContainer.apply {
-            isGone = App.isProVersion()
-            setOnClickListener {
-                requireContext().goToProVersion()
-            }
-        }
-        binding.buyPremium.setOnClickListener {
-            requireContext().goToProVersion()
-        }
-        ThemeStore.accentColor(requireContext()).let {
-            binding.buyPremium.setTextColor(it)
-            binding.diamondIcon.imageTintList = ColorStateList.valueOf(it)
-        }
 
         binding.container.drawAboveSystemBarsWithPadding()
     }

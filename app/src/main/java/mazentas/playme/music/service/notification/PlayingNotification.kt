@@ -31,8 +31,8 @@ import androidx.media.app.NotificationCompat.MediaStyle
 import code.name.monkey.appthemehelper.util.VersionUtils
 import mazentas.playme.music.R
 import mazentas.playme.music.activities.MainActivity
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.songCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.songCoverOptions
 import mazentas.playme.music.model.Song
 import mazentas.playme.music.service.MusicService
 import mazentas.playme.music.service.MusicService.Companion.ACTION_QUIT
@@ -128,7 +128,7 @@ class PlayingNotification(
         currentTarget = Glide.with(context)
             .asBitmap()
             .songCoverOptions(song)
-            .load(RetroGlideExtension.getSongModel(song))
+            .load(SmartGlideExtension.getSongModel(song))
             //.checkIgnoreMediaStore()
             .centerCrop()
             .into(object : CustomTarget<Bitmap>(

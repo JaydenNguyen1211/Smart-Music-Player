@@ -29,10 +29,10 @@ import code.name.monkey.appthemehelper.ThemeStore
 import mazentas.playme.music.*
 import mazentas.playme.music.adapter.base.MediaEntryViewHolder
 import mazentas.playme.music.db.PlaylistWithSongs
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.albumCoverOptions
-import mazentas.playme.music.glide.RetroGlideExtension.artistImageOptions
-import mazentas.playme.music.glide.RetroGlideExtension.songCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.albumCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension.artistImageOptions
+import mazentas.playme.music.glide.SmartGlideExtension.songCoverOptions
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.helper.menu.SongMenuHelper
 import mazentas.playme.music.model.Album
@@ -95,7 +95,7 @@ class SearchAdapter(
                 holder.title?.text = album.title
                 holder.text?.text = album.artistName
                 Glide.with(activity).asDrawable().albumCoverOptions(album.safeGetFirstSong())
-                    .load(RetroGlideExtension.getSongModel(album.safeGetFirstSong()))
+                    .load(SmartGlideExtension.getSongModel(album.safeGetFirstSong()))
                     .into(holder.image!!)
             }
 
@@ -105,7 +105,7 @@ class SearchAdapter(
                 holder.title?.text = artist.name
                 holder.text?.text = MusicUtil.getArtistInfoString(activity, artist)
                 Glide.with(activity).asDrawable().artistImageOptions(artist).load(
-                    RetroGlideExtension.getArtistModel(artist)
+                    SmartGlideExtension.getArtistModel(artist)
                 ).into(holder.image!!)
             }
 
@@ -115,7 +115,7 @@ class SearchAdapter(
                 holder.title?.text = song.title
                 holder.text?.text = song.albumName
                 Glide.with(activity).asDrawable().songCoverOptions(song)
-                    .load(RetroGlideExtension.getSongModel(song)).into(holder.image!!)
+                    .load(SmartGlideExtension.getSongModel(song)).into(holder.image!!)
             }
 
             GENRE -> {
@@ -143,7 +143,7 @@ class SearchAdapter(
                 holder.title?.text = artist.name
                 holder.text?.text = MusicUtil.getArtistInfoString(activity, artist)
                 Glide.with(activity).asDrawable().artistImageOptions(artist).load(
-                    RetroGlideExtension.getArtistModel(artist)
+                    SmartGlideExtension.getArtistModel(artist)
                 ).into(holder.image!!)
             }
 

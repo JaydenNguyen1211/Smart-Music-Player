@@ -30,8 +30,8 @@ import mazentas.playme.music.fragments.base.AbsPlayerFragment
 import mazentas.playme.music.fragments.base.goToArtist
 import mazentas.playme.music.fragments.player.CoverLyricsFragment
 import mazentas.playme.music.fragments.player.PlayerAlbumCoverFragment
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.artistImageOptions
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.artistImageOptions
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.model.Song
 import mazentas.playme.music.util.color.MediaNotificationProcessor
@@ -133,7 +133,7 @@ class FullPlayerFragment : AbsPlayerFragment(R.layout.fragment_full) {
             .observe(viewLifecycleOwner) { artist ->
                 if (artist.id != -1L) {
                     Glide.with(requireActivity())
-                        .load(RetroGlideExtension.getArtistModel(artist))
+                        .load(SmartGlideExtension.getArtistModel(artist))
                         .artistImageOptions(artist)
                         .into(binding.artistImage)
                 }

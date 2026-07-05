@@ -33,7 +33,7 @@ import mazentas.playme.music.db.PlaylistEntity
 import mazentas.playme.music.db.PlaylistWithSongs
 import mazentas.playme.music.db.toSongs
 import mazentas.playme.music.extensions.dipToPix
-import mazentas.playme.music.glide.RetroGlideExtension.playlistOptions
+import mazentas.playme.music.glide.SmartGlideExtension.playlistOptions
 import mazentas.playme.music.glide.playlistPreview.PlaylistPreview
 import mazentas.playme.music.helper.SortOrder.PlaylistSortOrder
 import mazentas.playme.music.helper.menu.PlaylistMenuHelper

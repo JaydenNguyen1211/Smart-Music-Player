@@ -36,7 +36,7 @@ import androidx.core.view.*
 import code.name.monkey.appthemehelper.ThemeStore
 import code.name.monkey.appthemehelper.util.TintHelper
 import mazentas.playme.music.util.PreferenceUtil
-import mazentas.playme.music.util.RetroUtil
+import mazentas.playme.music.util.SmartUtil
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.card.MaterialCardView
@@ -227,7 +227,7 @@ fun View.focusAndShowKeyboard() {
  */
 fun View.drawAboveSystemBars(onlyPortrait: Boolean = true) {
     if (PreferenceUtil.isFullScreenMode) return
-    if (onlyPortrait && RetroUtil.isLandscape) return
+    if (onlyPortrait && SmartUtil.isLandscape) return
     applyInsetter {
         type(navigationBars = true) {
             margin()

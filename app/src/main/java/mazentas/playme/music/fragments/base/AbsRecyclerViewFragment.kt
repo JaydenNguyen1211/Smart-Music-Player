@@ -64,34 +64,8 @@ abstract class AbsRecyclerViewFragment<A : RecyclerView.Adapter<*>, LM : Recycle
         checkForMargins()
         setUpRecyclerView()
         setupToolbar()
-        binding.shuffleButton.fitsSystemWindows = PreferenceUtil.isFullScreenMode
-        // Add listeners when shuffle is visible
-        if (isShuffleVisible) {
-            binding.recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-                override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                    super.onScrolled(recyclerView, dx, dy)
-                    if (dy > 0) {
-                        binding.shuffleButton.hide()
-                    } else if (dy < 0) {
-                        binding.shuffleButton.show()
-                    }
-
-                }
-            })
-            binding.shuffleButton.apply {
-                setOnClickListener {
-                    onShuffleClicked()
-                }
-                accentColor()
-            }
-        } else {
-            binding.shuffleButton.isVisible = false
-        }
-        libraryViewModel.getFabMargin().observe(viewLifecycleOwner) {
-            binding.shuffleButton.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                bottomMargin = it
-            }
-        }
+        // FAB (shuffle button) hidden by design across library screens
+        binding.shuffleButton.isVisible = false
     }
 
     open fun onShuffleClicked() {

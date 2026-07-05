@@ -141,7 +141,7 @@ object PreferenceUtil {
         CategoryInfo(CategoryInfo.Category.Home, true),
         CategoryInfo(CategoryInfo.Category.Songs, true),
         CategoryInfo(CategoryInfo.Category.Albums, true),
-        CategoryInfo(CategoryInfo.Category.Artists, true),
+        CategoryInfo(CategoryInfo.Category.Artists, false),
         CategoryInfo(CategoryInfo.Category.Playlists, true),
         CategoryInfo(CategoryInfo.Category.Genres, false),
         CategoryInfo(CategoryInfo.Category.Folder, false),
@@ -806,7 +806,8 @@ object PreferenceUtil {
     val isCrossfadeEnabled get() = crossFadeDuration > 0
 
     val materialYou
-        get() = sharedPreferences.getBoolean(MATERIAL_YOU, VersionUtils.hasS())
+        // Default OFF so the app's teal→green brand theme shows instead of wallpaper-based dynamic color
+        get() = sharedPreferences.getBoolean(MATERIAL_YOU, false)
 
     val isCustomFont
         get() = sharedPreferences.getBoolean(CUSTOM_FONT, false)

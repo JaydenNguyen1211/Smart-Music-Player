@@ -38,8 +38,8 @@ import mazentas.playme.music.fragments.MusicSeekSkipTouchListener
 import mazentas.playme.music.fragments.base.AbsPlayerFragment
 import mazentas.playme.music.fragments.base.goToAlbum
 import mazentas.playme.music.fragments.base.goToArtist
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.simpleSongCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.simpleSongCoverOptions
 import mazentas.playme.music.glide.crossfadeListener
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.helper.MusicProgressViewUpdateHelper
@@ -240,7 +240,7 @@ class CirclePlayerFragment : AbsPlayerFragment(R.layout.fragment_circle_player),
             binding.songInfo.hide()
         }
         Glide.with(this)
-            .load(RetroGlideExtension.getSongModel(MusicPlayerRemote.currentSong))
+            .load(SmartGlideExtension.getSongModel(MusicPlayerRemote.currentSong))
             .simpleSongCoverOptions(MusicPlayerRemote.currentSong)
             .thumbnail(lastRequest)
             .error(Glide.with(this).load(R.drawable.default_audio_art).fitCenter())

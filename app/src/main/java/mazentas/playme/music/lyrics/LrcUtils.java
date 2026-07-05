@@ -86,7 +86,7 @@ class LrcUtils {
     } catch (IOException e) {
       e.printStackTrace();
     }
-3
+
     Collections.sort(entryList);
     return entryList;
   }

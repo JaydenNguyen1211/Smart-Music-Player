@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <mazentas.playme.music.views.RetroShapeableImageView
+    <mazentas.playme.music.views.SmartShapeableImageView
         android:id="@+id/userImage"
         android:layout_width="42dp"
         android:layout_height="42dp"
@@ -15,7 +15,7 @@
         android:transitionName="user_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:retroCornerSize="21dp"
+        app:smartCornerSize="21dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -25,8 +25,8 @@
         android:layout_marginStart="16dp"
         android:ellipsize="end"
         android:text="@string/welcome"
-        app:layout_constraintStart_toEndOf="@+id/userImage"
-        app:layout_constraintTop_toTopOf="@+id/userImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userImage"
         tools:text="@tools:sample/lorem" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -38,8 +38,7 @@
         android:textAppearance="@style/TextViewHeadline6"
         android:textColor="?android:attr/textColorPrimary"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/userImage"
-        app:layout_constraintStart_toEndOf="@+id/userImage"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text"
         tools:text="@tools:sample/lorem" />
 </androidx.constraintlayout.widget.ConstraintLayout>

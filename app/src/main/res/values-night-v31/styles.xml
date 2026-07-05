@@ -4,6 +4,6 @@
     </style>
 
     <style name="Theme.AppWidget" parent="@android:style/Theme.DeviceDefault.DayNight">
-        <item name="colorSurface">@android:color/system_accent2_800</item>
+        <item name="colorSurface">@color/widget_md3_bg_color</item>
     </style>
 </resources>

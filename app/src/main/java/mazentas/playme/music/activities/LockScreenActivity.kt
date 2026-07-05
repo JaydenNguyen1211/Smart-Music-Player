@@ -26,10 +26,10 @@ import mazentas.playme.music.extensions.hideStatusBar
 import mazentas.playme.music.extensions.setTaskDescriptionColorAuto
 import mazentas.playme.music.extensions.whichFragment
 import mazentas.playme.music.fragments.player.lockscreen.LockScreenControlsFragment
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
-import mazentas.playme.music.glide.RetroGlideExtension.songCoverOptions
-import mazentas.playme.music.glide.RetroMusicColoredTarget
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartGlideExtension.songCoverOptions
+import mazentas.playme.music.glide.SmartMusicColoredTarget
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.util.color.MediaNotificationProcessor
 import com.bumptech.glide.Glide
@@ -110,9 +110,9 @@ class LockScreenActivity : AbsMusicServiceActivity() {
         Glide.with(this)
             .asBitmapPalette()
             .songCoverOptions(song)
-            .load(RetroGlideExtension.getSongModel(song))
+            .load(SmartGlideExtension.getSongModel(song))
             .dontAnimate()
-            .into(object : RetroMusicColoredTarget(binding.image) {
+            .into(object : SmartMusicColoredTarget(binding.image) {
                 override fun onColorReady(colors: MediaNotificationProcessor) {
                     fragment?.setColor(colors)
                 }

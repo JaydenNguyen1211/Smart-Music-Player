@@ -2,6 +2,14 @@
 <resources>
 
     <style name="Theme.SmartMusicPlayer.Base.Adaptive" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_on_primary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_on_primary_container</item>
+        <item name="colorSecondary">@color/md_theme_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_on_secondary_container</item>
         <item name="toolbarPopupTheme">@style/ThemeOverlay.Material3.Light</item>
         <item name="roundSelector">@drawable/round_selector</item>
         <item name="rectSelector">@drawable/rect_selector</item>
@@ -17,6 +25,14 @@
     </style>
 
     <style name="Theme.SmartMusicPlayer.Base" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/scheme_dark_primary</item>
+        <item name="colorOnPrimary">@color/scheme_dark_on_primary</item>
+        <item name="colorPrimaryContainer">@color/scheme_dark_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/scheme_dark_on_primary_container</item>
+        <item name="colorSecondary">@color/scheme_dark_secondary</item>
+        <item name="colorOnSecondary">@color/scheme_dark_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/scheme_dark_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/scheme_dark_on_secondary_container</item>
         <item name="toolbarPopupTheme">@style/ThemeOverlay.Material3.Dark</item>
         <item name="roundSelector">@drawable/round_selector</item>
         <item name="rectSelector">@drawable/rect_selector</item>
@@ -33,6 +49,14 @@
     </style>
 
     <style name="Theme.SmartMusicPlayer.Base.Black" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/scheme_dark_primary</item>
+        <item name="colorOnPrimary">@color/scheme_dark_on_primary</item>
+        <item name="colorPrimaryContainer">@color/scheme_dark_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/scheme_dark_on_primary_container</item>
+        <item name="colorSecondary">@color/scheme_dark_secondary</item>
+        <item name="colorOnSecondary">@color/scheme_dark_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/scheme_dark_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/scheme_dark_on_secondary_container</item>
         <item name="roundSelector">@drawable/round_selector</item>
         <item name="rectSelector">@drawable/rect_selector</item>
         <item name="materialAlertDialogTheme">@style/MaterialAlertDialogTheme</item>
@@ -49,6 +73,14 @@
     </style>
 
     <style name="Theme.SmartMusicPlayer.Base.Light" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/scheme_light_primary</item>
+        <item name="colorOnPrimary">@color/scheme_light_on_primary</item>
+        <item name="colorPrimaryContainer">@color/scheme_light_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/scheme_light_on_primary_container</item>
+        <item name="colorSecondary">@color/scheme_light_secondary</item>
+        <item name="colorOnSecondary">@color/scheme_light_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/scheme_light_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/scheme_light_on_secondary_container</item>
         <item name="roundSelector">@drawable/round_selector</item>
         <item name="rectSelector">@drawable/rect_selector</item>
         <item name="toolbarPopupTheme">@style/ThemeOverlay.Material3.Light</item>

@@ -24,7 +24,7 @@ import mazentas.playme.music.extensions.elevatedAccentColor
 import mazentas.playme.music.extensions.surfaceColor
 import mazentas.playme.music.fragments.base.AbsMainActivityFragment
 import mazentas.playme.music.fragments.search.clearText
-import mazentas.playme.music.glide.RetroGlideExtension.playlistOptions
+import mazentas.playme.music.glide.SmartGlideExtension.playlistOptions
 import mazentas.playme.music.glide.playlistPreview.PlaylistPreview
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.helper.menu.PlaylistMenuHelper

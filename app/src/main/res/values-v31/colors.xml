@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="widget_circle_button_color">@android:color/system_accent1_900</color>
-    <color name="widget_md3_button_bg_color">@android:color/system_accent1_50</color>
+    <!-- Brand colors instead of wallpaper-based @android:color/system_accent* -->
+    <color name="widget_circle_button_color">@color/theme_accent</color>
+    <color name="widget_md3_button_bg_color">@color/scheme_light_primary_container</color>
 </resources>

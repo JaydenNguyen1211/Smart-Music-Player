@@ -28,9 +28,9 @@ import mazentas.playme.music.databinding.FragmentArtistDetailsBinding
 import mazentas.playme.music.dialogs.AddToPlaylistDialog
 import mazentas.playme.music.extensions.*
 import mazentas.playme.music.fragments.base.AbsMainActivityFragment
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.artistImageOptions
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.artistImageOptions
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
 import mazentas.playme.music.glide.SingleColorTarget
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.helper.SortOrder
@@ -187,9 +187,9 @@ abstract class AbsArtistDetailsFragment : AbsMainActivityFragment(R.layout.fragm
                         scrobbles.show()
                         scrobblesLabel.show()
                         listeners.text =
-                            RetroUtil.formatValue(lastFmArtist.artist.stats.listeners.toFloat())
+                            SmartUtil.formatValue(lastFmArtist.artist.stats.listeners.toFloat())
                         scrobbles.text =
-                            RetroUtil.formatValue(lastFmArtist.artist.stats.playcount.toFloat())
+                            SmartUtil.formatValue(lastFmArtist.artist.stats.playcount.toFloat())
                     }
                 }
             }
@@ -203,7 +203,7 @@ abstract class AbsArtistDetailsFragment : AbsMainActivityFragment(R.layout.fragm
 
     private fun loadArtistImage(artist: Artist) {
         Glide.with(requireContext()).asBitmapPalette().artistImageOptions(artist)
-            .load(RetroGlideExtension.getArtistModel(artist)).dontAnimate()
+            .load(SmartGlideExtension.getArtistModel(artist)).dontAnimate()
             .into(object : SingleColorTarget(binding.image) {
                 override fun onColorReady(color: Int) {
                     setColors(color)

@@ -29,19 +29,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <mazentas.playme.music.views.ListItemView
-            android:id="@+id/appGithub"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constrainedWidth="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/sb2"
-            app:listItemIcon="@drawable/ic_github_circle"
-            app:listItemSummary="@string/git_hub_summary"
-            app:listItemTitle="@string/git_hub" />
-
-        <mazentas.playme.music.views.ListItemView
             android:id="@+id/appTranslation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -49,7 +36,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appGithub"
+            app:layout_constraintTop_toBottomOf="@id/sb2"
             app:listItemIcon="@drawable/ic_flag"
             app:listItemSummary="@string/translate_community"
             app:listItemTitle="@string/translate" />
@@ -108,19 +95,6 @@
             app:listItemIcon="@drawable/ic_share"
             app:listItemSummary="@string/share_summary"
             app:listItemTitle="@string/action_share" />
-
-        <mazentas.playme.music.views.ListItemView
-            android:id="@+id/faqLink"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constrainedWidth="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appShare"
-            app:listItemIcon="@drawable/ic_help"
-            app:listItemSummary="@string/help_summary"
-            app:listItemTitle="@string/faq" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

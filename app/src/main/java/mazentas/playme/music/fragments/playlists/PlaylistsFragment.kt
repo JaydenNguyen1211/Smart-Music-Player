@@ -30,7 +30,7 @@ import mazentas.playme.music.fragments.base.AbsRecyclerViewCustomGridSizeFragmen
 import mazentas.playme.music.helper.SortOrder.PlaylistSortOrder
 import mazentas.playme.music.interfaces.IPlaylistClickListener
 import mazentas.playme.music.util.PreferenceUtil
-import mazentas.playme.music.util.RetroUtil
+import mazentas.playme.music.util.SmartUtil
 import com.google.android.material.transition.MaterialSharedAxis
 
 class PlaylistsFragment :
@@ -73,7 +73,7 @@ class PlaylistsFragment :
     override fun onCreateMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateMenu(menu, inflater)
         val gridSizeItem: MenuItem = menu.findItem(R.id.action_grid_size)
-        if (RetroUtil.isLandscape) {
+        if (SmartUtil.isLandscape) {
             gridSizeItem.setTitle(R.string.action_grid_size_land)
         }
         setupGridSizeMenu(gridSizeItem.subMenu!!)
@@ -108,7 +108,7 @@ class PlaylistsFragment :
             7 -> gridSizeMenu.findItem(R.id.action_grid_size_7).isChecked = true
             8 -> gridSizeMenu.findItem(R.id.action_grid_size_8).isChecked = true
         }
-        val gridSize = if (RetroUtil.isLandscape) 4 else 3
+        val gridSize = if (SmartUtil.isLandscape) 4 else 3
         if (gridSize < 8) {
             gridSizeMenu.findItem(R.id.action_grid_size_8).isVisible = false
         }

@@ -17,7 +17,7 @@
 
     <item android:id="@android:id/background">
         <shape>
-            <corners android:radius="8dip" />
+            <corners android:radius="12dip" />
             <solid android:color="?android:attr/colorControlHighlight" />
         </shape>
     </item>
@@ -25,7 +25,7 @@
     <item android:id="@android:id/secondaryProgress">
         <clip>
             <shape>
-                <corners android:radius="8dip" />
+                <corners android:radius="12dip" />
                 <solid android:color="?attr/colorControlNormal" />
             </shape>
         </clip>
@@ -34,7 +34,7 @@
     <item android:id="@android:id/progress">
         <clip>
             <shape>
-                <corners android:radius="8dip" />
+                <corners android:radius="12dip" />
                 <solid android:color="@color/md_black_1000" />
             </shape>
         </clip>

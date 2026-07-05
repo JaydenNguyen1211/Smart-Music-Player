@@ -16,10 +16,12 @@
 
     <item android:drawable="?attr/colorPrimary" />
 
-    <item>
-        <bitmap
-            android:gravity="center"
-            android:src="@drawable/ic_splash" />
-    </item>
+    <item
+        android:width="150dp"
+        android:height="150dp"
+        android:drawable="@drawable/logo_v1"
+        android:gravity="center" />
+
+
 
 </layer-list>

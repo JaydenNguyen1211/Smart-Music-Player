@@ -31,8 +31,8 @@ import mazentas.playme.music.fragments.base.AbsPlayerFragment
 import mazentas.playme.music.fragments.player.PlayerAlbumCoverFragment
 import mazentas.playme.music.fragments.player.normal.PlayerFragment
 import mazentas.playme.music.glide.BlurTransformation
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.simpleSongCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.simpleSongCoverOptions
 import mazentas.playme.music.glide.crossfadeListener
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.model.Song
@@ -139,7 +139,7 @@ class CardBlurFragment : AbsPlayerFragment(R.layout.fragment_card_blur_player),
     private fun updateBlur() {
         // https://github.com/bumptech/glide/issues/527#issuecomment-148840717
         Glide.with(this)
-            .load(RetroGlideExtension.getSongModel(MusicPlayerRemote.currentSong))
+            .load(SmartGlideExtension.getSongModel(MusicPlayerRemote.currentSong))
             .simpleSongCoverOptions(MusicPlayerRemote.currentSong)
             .transform(
                 BlurTransformation.Builder(requireContext()).blurRadius(blurAmount.toFloat())

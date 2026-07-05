@@ -27,8 +27,8 @@ import mazentas.playme.music.db.toSongEntity
 import mazentas.playme.music.extensions.accentColor
 import mazentas.playme.music.extensions.drawAboveSystemBars
 import mazentas.playme.music.glide.BlurTransformation
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.songCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.songCoverOptions
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.helper.MusicProgressViewUpdateHelper
 import mazentas.playme.music.helper.MusicProgressViewUpdateHelper.Callback
@@ -242,7 +242,7 @@ class DriveModeActivity : AbsMusicServiceActivity(), Callback {
         binding.songText.text = song.artistName
 
         Glide.with(this)
-            .load(RetroGlideExtension.getSongModel(song))
+            .load(SmartGlideExtension.getSongModel(song))
             .songCoverOptions(song)
             .transform(BlurTransformation.Builder(this).build())
             .into(binding.image)

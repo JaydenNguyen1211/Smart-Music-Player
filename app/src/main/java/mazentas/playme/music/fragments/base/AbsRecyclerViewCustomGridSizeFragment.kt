@@ -18,7 +18,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import androidx.transition.TransitionManager
 import mazentas.playme.music.R
-import mazentas.playme.music.util.RetroUtil
+import mazentas.playme.music.util.SmartUtil
 import mazentas.playme.music.util.logD
 import com.google.android.material.transition.MaterialFade
 
@@ -29,7 +29,7 @@ abstract class AbsRecyclerViewCustomGridSizeFragment<A : RecyclerView.Adapter<*>
     private var sortOrder: String? = null
     private var currentLayoutRes: Int = 0
     private val isLandscape: Boolean
-        get() = RetroUtil.isLandscape
+        get() = SmartUtil.isLandscape
 
     val maxGridSize: Int
         get() = if (isLandscape) {

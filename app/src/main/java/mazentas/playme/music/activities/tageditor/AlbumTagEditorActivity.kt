@@ -31,14 +31,14 @@ import code.name.monkey.appthemehelper.util.MaterialValueHelper
 import mazentas.playme.music.R
 import mazentas.playme.music.databinding.ActivityAlbumTagEditorBinding
 import mazentas.playme.music.extensions.*
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
 import mazentas.playme.music.glide.palette.BitmapPaletteWrapper
 import mazentas.playme.music.model.ArtworkInfo
 import mazentas.playme.music.model.Song
 import mazentas.playme.music.util.ImageUtil
 import mazentas.playme.music.util.MusicUtil
-import mazentas.playme.music.util.RetroColorUtil.generatePalette
-import mazentas.playme.music.util.RetroColorUtil.getColor
+import mazentas.playme.music.util.SmartColorUtil.generatePalette
+import mazentas.playme.music.util.SmartColorUtil.getColor
 import mazentas.playme.music.util.logD
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy

@@ -2,9 +2,9 @@ package mazentas.playme.music
 
 import androidx.room.Room
 import mazentas.playme.music.auto.AutoMusicProvider
-import mazentas.playme.music.cast.RetroWebServer
+import mazentas.playme.music.cast.SmartWebServer
 import mazentas.playme.music.db.MIGRATION_23_24
-import mazentas.playme.music.db.RetroDatabase
+import mazentas.playme.music.db.SmartDatabase
 import mazentas.playme.music.fragments.LibraryViewModel
 import mazentas.playme.music.fragments.albums.AlbumDetailsViewModel
 import mazentas.playme.music.fragments.artists.ArtistDetailsViewModel
@@ -40,21 +40,21 @@ val networkModule = module {
 private val roomModule = module {
 
     single {
-        Room.databaseBuilder(androidContext(), RetroDatabase::class.java, "playlist.db")
+        Room.databaseBuilder(androidContext(), SmartDatabase::class.java, "playlist.db")
             .addMigrations(MIGRATION_23_24)
             .build()
     }
 
     factory {
-        get<RetroDatabase>().playlistDao()
+        get<SmartDatabase>().playlistDao()
     }
 
     factory {
-        get<RetroDatabase>().playCountDao()
+        get<SmartDatabase>().playCountDao()
     }
 
     factory {
-        get<RetroDatabase>().historyDao()
+        get<SmartDatabase>().historyDao()
     }
 
     single {
@@ -79,7 +79,7 @@ private val mainModule = module {
         androidContext().contentResolver
     }
     single {
-        RetroWebServer(get())
+        SmartWebServer(get())
     }
 }
 private val dataModule = module {

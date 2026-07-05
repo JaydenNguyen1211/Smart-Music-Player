@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:transitionGroup="true"
-                app:cardCornerRadius="4dp"
+                app:cardCornerRadius="6dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/drag_view"
                 app:layout_constraintTop_toTopOf="parent">

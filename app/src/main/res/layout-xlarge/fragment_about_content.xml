@@ -20,10 +20,6 @@
         <include
             android:id="@+id/card_credit"
             layout="@layout/card_credit" />
-
-        <include
-            android:id="@+id/card_social"
-            layout="@layout/card_social" />
     </LinearLayout>
 
     <LinearLayout
@@ -36,8 +32,8 @@
         grid:layout_row="0">
 
         <include
-            android:id="@+id/card_retro_info"
-            layout="@layout/card_retro_info" />
+            android:id="@+id/card_smart_info"
+            layout="@layout/card_smart_info" />
 
         <include
             android:id="@+id/card_other"

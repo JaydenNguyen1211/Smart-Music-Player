@@ -59,7 +59,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <mazentas.playme.music.views.RetroShapeableImageView
+            <mazentas.playme.music.views.SmartShapeableImageView
                 android:id="@+id/artistImage"
                 android:layout_width="52dp"
                 android:layout_height="52dp"
@@ -68,7 +68,7 @@
                 android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/albumCoverContainer"
-                app:retroCornerSize="26dp"
+                app:smartCornerSize="26dp"
                 tools:srcCompat="@tools:sample/backgrounds/scenic[11]" />
 
             <mazentas.playme.music.views.BaselineGridTextView

@@ -5,4 +5,14 @@
 
     <color name="bottomSheetColor">#202020</color>
     <color name="widget_md3_bg_color">@color/darkerColorSurface</color>
+
+    <!-- Adaptive (DayNight) aliases → dark scheme at night -->
+    <color name="md_theme_primary">@color/scheme_dark_primary</color>
+    <color name="md_theme_on_primary">@color/scheme_dark_on_primary</color>
+    <color name="md_theme_primary_container">@color/scheme_dark_primary_container</color>
+    <color name="md_theme_on_primary_container">@color/scheme_dark_on_primary_container</color>
+    <color name="md_theme_secondary">@color/scheme_dark_secondary</color>
+    <color name="md_theme_on_secondary">@color/scheme_dark_on_secondary</color>
+    <color name="md_theme_secondary_container">@color/scheme_dark_secondary_container</color>
+    <color name="md_theme_on_secondary_container">@color/scheme_dark_on_secondary_container</color>
 </resources>

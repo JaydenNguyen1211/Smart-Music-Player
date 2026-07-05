@@ -33,10 +33,10 @@ import mazentas.playme.music.R
 import mazentas.playme.music.adapter.base.AbsMultiSelectAdapter
 import mazentas.playme.music.adapter.base.MediaEntryViewHolder
 import mazentas.playme.music.extensions.accentColor
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
-import mazentas.playme.music.glide.RetroGlideExtension.songCoverOptions
-import mazentas.playme.music.glide.RetroMusicColoredTarget
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartGlideExtension.songCoverOptions
+import mazentas.playme.music.glide.SmartMusicColoredTarget
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.helper.SortOrder
 import mazentas.playme.music.helper.menu.SongMenuHelper
@@ -44,7 +44,7 @@ import mazentas.playme.music.helper.menu.SongsMenuHelper
 import mazentas.playme.music.model.Song
 import mazentas.playme.music.util.MusicUtil
 import mazentas.playme.music.util.PreferenceUtil
-import mazentas.playme.music.util.RetroUtil
+import mazentas.playme.music.util.SmartUtil
 import mazentas.playme.music.util.color.MediaNotificationProcessor
 import com.bumptech.glide.Glide
 import me.zhanghai.android.fastscroll.PopupTextProvider
@@ -124,7 +124,7 @@ open class SongAdapter(
             holder.text?.setTypeface(null, Typeface.NORMAL)
         }
         loadAlbumCover(song, holder)
-        val landscape = RetroUtil.isLandscape
+        val landscape = SmartUtil.isLandscape
         if ((PreferenceUtil.songGridSize > 2 && !landscape) || (PreferenceUtil.songGridSizeLand > 5 && landscape)) {
             holder.menu?.isVisible = false
         }
@@ -147,8 +147,8 @@ open class SongAdapter(
         Glide.with(activity)
             .asBitmapPalette()
             .songCoverOptions(song)
-            .load(RetroGlideExtension.getSongModel(song))
-            .into(object : RetroMusicColoredTarget(holder.image!!) {
+            .load(SmartGlideExtension.getSongModel(song))
+            .into(object : SmartMusicColoredTarget(holder.image!!) {
                 override fun onColorReady(colors: MediaNotificationProcessor) {
                     setColors(colors, holder)
                 }

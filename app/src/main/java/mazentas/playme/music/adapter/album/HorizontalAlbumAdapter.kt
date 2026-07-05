@@ -17,10 +17,10 @@ package mazentas.playme.music.adapter.album
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.albumCoverOptions
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
-import mazentas.playme.music.glide.RetroMusicColoredTarget
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.albumCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartMusicColoredTarget
 import mazentas.playme.music.helper.HorizontalAdapterHelper
 import mazentas.playme.music.interfaces.IAlbumClickListener
 import mazentas.playme.music.model.Album
@@ -52,8 +52,8 @@ class HorizontalAlbumAdapter(
         Glide.with(activity)
             .asBitmapPalette()
             .albumCoverOptions(album.safeGetFirstSong())
-            .load(RetroGlideExtension.getSongModel(album.safeGetFirstSong()))
-            .into(object : RetroMusicColoredTarget(holder.image!!) {
+            .load(SmartGlideExtension.getSongModel(album.safeGetFirstSong()))
+            .into(object : SmartMusicColoredTarget(holder.image!!) {
                 override fun onColorReady(colors: MediaNotificationProcessor) {
                     setColors(colors, holder)
                 }

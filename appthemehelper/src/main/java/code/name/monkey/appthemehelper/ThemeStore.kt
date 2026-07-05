@@ -344,8 +344,10 @@ private constructor(private val mContext: Context) : ThemeStorePrefKeys, ThemeSt
         }
 
         fun isMD3Enabled(context: Context): Boolean {
+            // Default OFF so the app's teal→green brand accent shows instead of
+            // the wallpaper-based Material You (m3_accent_color) dynamic color.
             return PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(ThemeStorePrefKeys.KEY_MATERIAL_YOU, VersionUtils.hasS())
+                .getBoolean(ThemeStorePrefKeys.KEY_MATERIAL_YOU, false)
         }
 
         private fun isWallpaperAccentEnabled(context: Context): Boolean {

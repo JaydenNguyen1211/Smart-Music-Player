@@ -19,6 +19,7 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.Drawable
+import android.graphics.drawable.GradientDrawable
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.ProgressBar
@@ -136,9 +137,17 @@ fun Button.accentTextColor() {
 
 fun MaterialButton.accentBackgroundColor() {
     if (materialYou) return
-    backgroundTintList = ColorStateList(
-        arrayOf(intArrayOf(android.R.attr.state_enabled), intArrayOf()),
-            intArrayOf(context.accentColor(), context.accentColor().addAlpha(0.12f)))
+    // Paint the app's base teal→green brand gradient as the button background.
+    val start = ContextCompat.getColor(context, R.color.theme_gradient_start)
+    val end = ContextCompat.getColor(context, R.color.theme_gradient_end)
+    backgroundTintList = null
+    background = GradientDrawable(
+        GradientDrawable.Orientation.LEFT_RIGHT,
+        intArrayOf(start, end)
+    ).apply { cornerRadius = this@accentBackgroundColor.cornerRadius.toFloat() }
+    val textColor = MaterialValueHelper.getPrimaryTextColor(context, ColorUtil.isColorLight(start))
+    setTextColor(textColor)
+    iconTint = ColorStateList.valueOf(textColor)
 }
 
 fun MaterialButton.accentOutlineColor() {

@@ -12,17 +12,14 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.core.content.pm.PackageInfoCompat
-import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.FragmentActivity
 import code.name.monkey.appthemehelper.util.ATHUtil.isWindowBackgroundDark
 import code.name.monkey.appthemehelper.util.ColorUtil.isColorLight
 import code.name.monkey.appthemehelper.util.ColorUtil.lightenColor
 import code.name.monkey.appthemehelper.util.MaterialValueHelper.getPrimaryTextColor
 import mazentas.playme.music.BuildConfig
-import mazentas.playme.music.Constants
 import mazentas.playme.music.databinding.FragmentWhatsNewBinding
 import mazentas.playme.music.extensions.accentColor
-import mazentas.playme.music.extensions.openUrl
 import mazentas.playme.music.util.PreferenceUtil.lastVersion
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import java.nio.charset.StandardCharsets
@@ -45,7 +42,7 @@ class WhatsNewFragment : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         try {
             val buf = StringBuilder()
-            val stream = requireContext().assets.open("retro-changelog.html")
+            val stream = requireContext().assets.open("smart-changelog.html")
             stream.reader(StandardCharsets.UTF_8).buffered().use { br ->
                 var str: String?
                 while (br.readLine().also { str = it } != null) {
@@ -97,19 +94,6 @@ class WhatsNewFragment : BottomSheetDialogFragment() {
             )
         }
         setChangelogRead(requireContext())
-        binding.tgFab.setOnClickListener {
-            openUrl(Constants.TELEGRAM_CHANGE_LOG)
-        }
-        binding.tgFab.accentColor()
-        binding.tgFab.shrink()
-        binding.container.setOnScrollChangeListener { _: NestedScrollView?, _: Int, scrollY: Int, _: Int, oldScrollY: Int ->
-            val dy = scrollY - oldScrollY
-            if (dy > 0) {
-                binding.tgFab.shrink()
-            } else if (dy < 0) {
-                binding.tgFab.extend()
-            }
-        }
     }
 
     override fun onDestroy() {

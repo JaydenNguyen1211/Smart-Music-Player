@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 app:layout_collapseMode="pin"
                 app:navigationIcon="@drawable/ic_arrow_back"
-                app:title="@string/retro_music_pro"
+                app:title="@string/smart_music_pro"
                 app:titleTextAppearance="@style/ToolbarTextAppearanceNormal"
                 app:titleTextColor="@color/md_white_1000" />
 
@@ -157,7 +157,7 @@
                 android:gravity="center"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="24dp"
-                android:text="@string/try_retro_music_premium"
+                android:text="@string/try_smart_music_premium"
                 android:textAppearance="@style/TextViewHeadline5"
                 android:textColor="@color/md_white_1000" />
 
@@ -172,7 +172,7 @@
                 android:textAppearance="@style/TextViewHeadline6"
                 android:textColor="@color/md_black_1000"
                 app:backgroundTint="@color/md_white_1000"
-                app:cornerRadius="28dp" />
+                app:cornerRadius="40dp" />
 
 
             <com.google.android.material.button.MaterialButton
@@ -184,7 +184,7 @@
                 android:paddingVertical="16dp"
                 android:text="@string/purchase"
                 android:textAppearance="@style/TextViewHeadline6"
-                app:cornerRadius="28dp" />
+                app:cornerRadius="40dp" />
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

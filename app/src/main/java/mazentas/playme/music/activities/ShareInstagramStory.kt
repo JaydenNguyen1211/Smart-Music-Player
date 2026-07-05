@@ -34,10 +34,10 @@ import mazentas.playme.music.activities.base.AbsThemeActivity
 import mazentas.playme.music.databinding.ActivityShareInstagramBinding
 import mazentas.playme.music.extensions.accentColor
 import mazentas.playme.music.extensions.setStatusBarColor
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
-import mazentas.playme.music.glide.RetroGlideExtension.songCoverOptions
-import mazentas.playme.music.glide.RetroMusicColoredTarget
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartGlideExtension.songCoverOptions
+import mazentas.playme.music.glide.SmartMusicColoredTarget
 import mazentas.playme.music.model.Song
 import mazentas.playme.music.util.Share
 import mazentas.playme.music.util.color.MediaNotificationProcessor
@@ -77,8 +77,8 @@ class ShareInstagramStory : AbsThemeActivity() {
             Glide.with(this)
                 .asBitmapPalette()
                 .songCoverOptions(songFinal)
-                .load(RetroGlideExtension.getSongModel(songFinal))
-                .into(object : RetroMusicColoredTarget(binding.image) {
+                .load(SmartGlideExtension.getSongModel(songFinal))
+                .into(object : SmartMusicColoredTarget(binding.image) {
                     override fun onColorReady(colors: MediaNotificationProcessor) {
                         setColors(colors.backgroundColor)
                     }

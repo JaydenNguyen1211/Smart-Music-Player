@@ -41,9 +41,9 @@ class App : Application() {
             modules(appModules)
         }
         // default theme
-        if (!ThemeStore.isConfigured(this, 3)) {
+        if (!ThemeStore.isConfigured(this, 4)) {
             ThemeStore.editTheme(this)
-                .accentColorRes(code.name.monkey.appthemehelper.R.color.md_deep_purple_A200)
+                .accentColorRes(R.color.theme_accent)
                 .coloredNavigationBar(true)
                 .commit()
         }

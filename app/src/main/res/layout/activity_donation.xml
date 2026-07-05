@@ -42,7 +42,7 @@
                 android:clickable="true"
                 android:elevation="4dp"
                 android:focusable="true"
-                app:cardCornerRadius="8dp"
+                app:cardCornerRadius="12dp"
                 app:cardUseCompatPadding="true">
 
                 <ImageView

@@ -19,8 +19,8 @@ import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentActivity
 import mazentas.playme.music.R
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.songCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.songCoverOptions
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.helper.MusicPlayerRemote.isPlaying
 import mazentas.playme.music.helper.MusicPlayerRemote.playNextSong
@@ -78,7 +78,7 @@ class PlayingQueueAdapter(
             return
         }
         Glide.with(activity)
-            .load(RetroGlideExtension.getSongModel(song))
+            .load(SmartGlideExtension.getSongModel(song))
             .songCoverOptions(song)
             .into(holder.image!!)
     }

@@ -41,10 +41,10 @@ import mazentas.playme.music.extensions.elevatedAccentColor
 import mazentas.playme.music.extensions.setUpMediaRouteButton
 import mazentas.playme.music.fragments.ReloadType
 import mazentas.playme.music.fragments.base.AbsMainActivityFragment
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.profileBannerOptions
-import mazentas.playme.music.glide.RetroGlideExtension.songCoverOptions
-import mazentas.playme.music.glide.RetroGlideExtension.userProfileOptions
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.profileBannerOptions
+import mazentas.playme.music.glide.SmartGlideExtension.songCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension.userProfileOptions
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.interfaces.IScrollHelper
 import mazentas.playme.music.model.Song
@@ -165,20 +165,20 @@ class HomeFragment :
             findNavController().navigate(R.id.action_search, null, navOptions)
         }
         val hexColor = String.format("#%06X", 0xFFFFFF and accentColor())
-        val appName = "Retro <font color=$hexColor>Music</font>".parseAsHtml()
+        val appName = "Smart <font color=$hexColor>Music</font>".parseAsHtml()
         binding.appBarLayout.title = appName
     }
 
     private fun loadProfile() {
         binding.bannerImage?.let {
             Glide.with(requireContext())
-                .load(RetroGlideExtension.getBannerModel())
-                .profileBannerOptions(RetroGlideExtension.getBannerModel())
+                .load(SmartGlideExtension.getBannerModel())
+                .profileBannerOptions(SmartGlideExtension.getBannerModel())
                 .into(it)
         }
         Glide.with(requireActivity())
-            .load(RetroGlideExtension.getUserModel())
-            .userProfileOptions(RetroGlideExtension.getUserModel(), requireContext())
+            .load(SmartGlideExtension.getUserModel())
+            .userProfileOptions(SmartGlideExtension.getUserModel(), requireContext())
             .into(binding.userImage)
     }
 
@@ -268,7 +268,7 @@ class HomeFragment :
                 }
             }
             Glide.with(this)
-                .load(RetroGlideExtension.getSongModel(songs[index]))
+                .load(SmartGlideExtension.getSongModel(songs[index]))
                 .songCoverOptions(songs[index])
                 .into(imageView)
         }

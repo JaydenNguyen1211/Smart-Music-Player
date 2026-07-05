@@ -26,7 +26,7 @@ import mazentas.playme.music.R
 import mazentas.playme.music.adapter.base.AbsMultiSelectAdapter
 import mazentas.playme.music.adapter.base.MediaEntryViewHolder
 import mazentas.playme.music.extensions.getTintedDrawable
-import mazentas.playme.music.glide.RetroGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension
 import mazentas.playme.music.glide.audiocover.AudioFileCover
 import mazentas.playme.music.interfaces.ICallbacks
 import mazentas.playme.music.util.MusicUtil
@@ -114,7 +114,7 @@ class SongFileAdapter(
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .error(error)
                 .placeholder(error)
-                .transition(RetroGlideExtension.getDefaultTransition())
+                .transition(SmartGlideExtension.getDefaultTransition())
                 .signature(MediaStoreSignature("", file.lastModified(), 0))
                 .into(holder.image!!)
         }

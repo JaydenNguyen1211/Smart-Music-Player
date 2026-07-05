@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="m3_accent_color">@android:color/system_accent1_600</color>
-    <color name="m3_selection_color">@android:color/system_accent1_50</color>
+    <!-- Brand teal instead of wallpaper-based @android:color/system_accent* -->
+    <color name="m3_accent_color">#11D5D5</color>
+    <color name="m3_selection_color">#6FF6F6</color>
 </resources>

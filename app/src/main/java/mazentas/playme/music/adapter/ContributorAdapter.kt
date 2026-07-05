@@ -23,7 +23,7 @@ import androidx.recyclerview.widget.RecyclerView
 import mazentas.playme.music.R
 import mazentas.playme.music.extensions.openUrl
 import mazentas.playme.music.model.Contributor
-import mazentas.playme.music.views.RetroShapeableImageView
+import mazentas.playme.music.views.SmartShapeableImageView
 import com.bumptech.glide.Glide
 
 class ContributorAdapter(
@@ -81,7 +81,7 @@ class ContributorAdapter(
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title: TextView = itemView.findViewById(R.id.title)
         val text: TextView = itemView.findViewById(R.id.text)
-        val image: RetroShapeableImageView = itemView.findViewById(R.id.icon)
+        val image: SmartShapeableImageView = itemView.findViewById(R.id.icon)
 
         internal fun bindData(contributor: Contributor) {
             title.text = contributor.name

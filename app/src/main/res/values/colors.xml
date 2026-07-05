@@ -9,6 +9,44 @@
     <color name="app_shortcut_default_foreground">#607d8b</color>
     <color name="app_shortcut_default_background">#f5f5f5</color>
     <color name="md_indigo_A400">#3D5AFE</color>
+
+    <!-- App base theme (gradient) -->
+    <color name="theme_gradient_start">#11D5D5</color>
+    <color name="theme_gradient_end">#0FD35A</color>
+    <!-- Solid representative of the gradient, used as the ATE accent color -->
+    <color name="theme_accent">#11D5D5</color>
+
+    <!-- Material3 color scheme derived from the teal (#11D5D5) → green (#0FD35A) base.
+         Teal drives the "primary" role, green the "secondary" role. -->
+    <!-- Light scheme -->
+    <color name="scheme_light_primary">#006A6B</color>
+    <color name="scheme_light_on_primary">#FFFFFF</color>
+    <color name="scheme_light_primary_container">#6FF6F6</color>
+    <color name="scheme_light_on_primary_container">#002020</color>
+    <color name="scheme_light_secondary">#006D3B</color>
+    <color name="scheme_light_on_secondary">#FFFFFF</color>
+    <color name="scheme_light_secondary_container">#74FDA0</color>
+    <color name="scheme_light_on_secondary_container">#00210E</color>
+    <!-- Dark scheme -->
+    <color name="scheme_dark_primary">#4CD9DA</color>
+    <color name="scheme_dark_on_primary">#003737</color>
+    <color name="scheme_dark_primary_container">#004F50</color>
+    <color name="scheme_dark_on_primary_container">#6FF6F6</color>
+    <color name="scheme_dark_secondary">#55E082</color>
+    <color name="scheme_dark_on_secondary">#00391C</color>
+    <color name="scheme_dark_secondary_container">#005227</color>
+    <color name="scheme_dark_on_secondary_container">#74FDA0</color>
+
+    <!-- Adaptive (DayNight) aliases → light values here, dark values in values-night -->
+    <color name="md_theme_primary">@color/scheme_light_primary</color>
+    <color name="md_theme_on_primary">@color/scheme_light_on_primary</color>
+    <color name="md_theme_primary_container">@color/scheme_light_primary_container</color>
+    <color name="md_theme_on_primary_container">@color/scheme_light_on_primary_container</color>
+    <color name="md_theme_secondary">@color/scheme_light_secondary</color>
+    <color name="md_theme_on_secondary">@color/scheme_light_on_secondary</color>
+    <color name="md_theme_secondary_container">@color/scheme_light_secondary_container</color>
+    <color name="md_theme_on_secondary_container">@color/scheme_light_on_secondary_container</color>
+
     <color name="dark_color">#202124</color>
     <color name="black_color">#202124</color>
 

@@ -22,7 +22,7 @@ import mazentas.playme.music.util.PreferenceUtil.playbackPitch
 import mazentas.playme.music.util.PreferenceUtil.playbackSpeed
 import mazentas.playme.music.util.logE
 
-class RetroExoPlayer(context: Context) : AudioManagerPlayback(context), Player.Listener {
+class SmartExoPlayer(context: Context) : AudioManagerPlayback(context), Player.Listener {
     private var player: ExoPlayer = ExoPlayer.Builder(context).build()
     override var callbacks: PlaybackCallbacks? = null
 
@@ -243,6 +243,6 @@ class RetroExoPlayer(context: Context) : AudioManagerPlayback(context), Player.L
     }
 
     companion object {
-        val TAG: String = RetroExoPlayer::class.java.simpleName
+        val TAG: String = SmartExoPlayer::class.java.simpleName
     }
 }

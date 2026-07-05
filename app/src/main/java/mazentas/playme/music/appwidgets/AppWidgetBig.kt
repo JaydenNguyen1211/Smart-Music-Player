@@ -29,13 +29,13 @@ import mazentas.playme.music.R
 import mazentas.playme.music.activities.MainActivity
 import mazentas.playme.music.appwidgets.base.BaseAppWidget
 import mazentas.playme.music.extensions.getTintedDrawable
-import mazentas.playme.music.glide.RetroGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension
 import mazentas.playme.music.service.MusicService
 import mazentas.playme.music.service.MusicService.Companion.ACTION_REWIND
 import mazentas.playme.music.service.MusicService.Companion.ACTION_SKIP
 import mazentas.playme.music.service.MusicService.Companion.ACTION_TOGGLE_PAUSE
 import mazentas.playme.music.util.PreferenceUtil
-import mazentas.playme.music.util.RetroUtil
+import mazentas.playme.music.util.SmartUtil
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.target.Target
@@ -144,7 +144,7 @@ class AppWidgetBig : BaseAppWidget() {
         linkButtons(service, appWidgetView)
 
         // Load the album cover async and push the update on completion
-        val p = RetroUtil.getScreenSize(service)
+        val p = SmartUtil.getScreenSize(service)
         val widgetImageSize = p.x.coerceAtMost(p.y)
         val appContext = service.applicationContext
         service.runOnUiThread {
@@ -154,7 +154,7 @@ class AppWidgetBig : BaseAppWidget() {
             target = Glide.with(appContext)
                 .asBitmap()
                 //.checkIgnoreMediaStore()
-                .load(RetroGlideExtension.getSongModel(song))
+                .load(SmartGlideExtension.getSongModel(song))
                 .into(object : CustomTarget<Bitmap>(widgetImageSize, widgetImageSize) {
                     override fun onResourceReady(
                         resource: Bitmap,

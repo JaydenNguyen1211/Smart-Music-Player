@@ -29,9 +29,9 @@ import mazentas.playme.music.R
 import mazentas.playme.music.activities.MainActivity
 import mazentas.playme.music.appwidgets.base.BaseAppWidget
 import mazentas.playme.music.extensions.getTintedDrawable
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
-import mazentas.playme.music.glide.RetroGlideExtension.songCoverOptions
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartGlideExtension.songCoverOptions
 import mazentas.playme.music.glide.palette.BitmapPaletteWrapper
 import mazentas.playme.music.service.MusicService
 import mazentas.playme.music.service.MusicService.Companion.ACTION_REWIND
@@ -127,7 +127,7 @@ class AppWidgetSmall : BaseAppWidget() {
                 .asBitmapPalette()
                 .songCoverOptions(song)
                 //.checkIgnoreMediaStore()
-                .load(RetroGlideExtension.getSongModel(song))
+                .load(SmartGlideExtension.getSongModel(song))
                 .centerCrop()
                 .into(object : CustomTarget<BitmapPaletteWrapper>(imageSize, imageSize) {
                     override fun onResourceReady(

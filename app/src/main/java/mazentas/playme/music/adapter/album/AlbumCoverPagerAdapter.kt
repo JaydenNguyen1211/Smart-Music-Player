@@ -29,10 +29,10 @@ import mazentas.playme.music.activities.MainActivity
 import mazentas.playme.music.fragments.AlbumCoverStyle
 import mazentas.playme.music.fragments.NowPlayingScreen.*
 import mazentas.playme.music.fragments.base.goToLyrics
-import mazentas.playme.music.glide.RetroGlideExtension
-import mazentas.playme.music.glide.RetroGlideExtension.asBitmapPalette
-import mazentas.playme.music.glide.RetroGlideExtension.songCoverOptions
-import mazentas.playme.music.glide.RetroMusicColoredTarget
+import mazentas.playme.music.glide.SmartGlideExtension
+import mazentas.playme.music.glide.SmartGlideExtension.asBitmapPalette
+import mazentas.playme.music.glide.SmartGlideExtension.songCoverOptions
+import mazentas.playme.music.glide.SmartMusicColoredTarget
 import mazentas.playme.music.misc.CustomFragmentStatePagerAdapter
 import mazentas.playme.music.model.Song
 import mazentas.playme.music.util.MusicUtil
@@ -181,9 +181,9 @@ class AlbumCoverPagerAdapter(
                 .asBitmapPalette()
                 .songCoverOptions(song)
                 //.checkIgnoreMediaStore()
-                .load(RetroGlideExtension.getSongModel(song))
+                .load(SmartGlideExtension.getSongModel(song))
                 .dontAnimate()
-                .into(object : RetroMusicColoredTarget(albumCover) {
+                .into(object : SmartMusicColoredTarget(albumCover) {
                     override fun onColorReady(colors: MediaNotificationProcessor) {
                         setColor(colors)
                     }

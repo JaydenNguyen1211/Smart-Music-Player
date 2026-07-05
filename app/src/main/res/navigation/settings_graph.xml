@@ -13,74 +13,61 @@
         <action
             android:id="@+id/action_mainSettingsFragment_to_themeSettingsFragment"
             app:destination="@id/themeSettingsFragment"
-            app:enterAnim="@anim/retro_fragment_open_enter"
-            app:exitAnim="@anim/retro_fragment_open_exit"
-            app:popEnterAnim="@anim/retro_fragment_close_enter"
-            app:popExitAnim="@anim/retro_fragment_close_exit" />
-
-        <action
-            android:id="@+id/action_mainSettingsFragment_to_imageSettingFragment"
-            app:destination="@id/imageSettingFragment"
-            app:enterAnim="@anim/retro_fragment_open_enter"
-            app:exitAnim="@anim/retro_fragment_open_exit"
-            app:popEnterAnim="@anim/retro_fragment_close_enter"
-            app:popExitAnim="@anim/retro_fragment_close_exit" />
-
-        <action
-            android:id="@+id/action_mainSettingsFragment_to_nowPlayingSettingsFragment"
-            app:destination="@id/nowPlayingSettingsFragment"
-            app:enterAnim="@anim/retro_fragment_open_enter"
-            app:exitAnim="@anim/retro_fragment_open_exit"
-            app:popEnterAnim="@anim/retro_fragment_close_enter"
-            app:popExitAnim="@anim/retro_fragment_close_exit" />
-
-        <action
-            android:id="@+id/action_mainSettingsFragment_to_audioSettings"
-            app:destination="@id/audioSettings"
-            app:enterAnim="@anim/retro_fragment_open_enter"
-            app:exitAnim="@anim/retro_fragment_open_exit"
-            app:popEnterAnim="@anim/retro_fragment_close_enter"
-            app:popExitAnim="@anim/retro_fragment_close_exit" />
-
-        <action
-            android:id="@+id/action_mainSettingsFragment_to_otherSettingsFragment"
-            app:destination="@id/otherSettingsFragment"
-            app:enterAnim="@anim/retro_fragment_open_enter"
-            app:exitAnim="@anim/retro_fragment_open_exit"
-            app:popEnterAnim="@anim/retro_fragment_close_enter"
-            app:popExitAnim="@anim/retro_fragment_close_exit" />
+            app:enterAnim="@anim/smart_fragment_open_enter"
+            app:exitAnim="@anim/smart_fragment_open_exit"
+            app:popEnterAnim="@anim/smart_fragment_close_enter"
+            app:popExitAnim="@anim/smart_fragment_close_exit" />
 
         <action
             android:id="@+id/action_mainSettingsFragment_to_personalizeSettingsFragment"
             app:destination="@id/personalizeSettingsFragment"
-            app:enterAnim="@anim/retro_fragment_open_enter"
-            app:exitAnim="@anim/retro_fragment_open_exit"
-            app:popEnterAnim="@anim/retro_fragment_close_enter"
-            app:popExitAnim="@anim/retro_fragment_close_exit" />
+            app:enterAnim="@anim/smart_fragment_open_enter"
+            app:exitAnim="@anim/smart_fragment_open_exit"
+            app:popEnterAnim="@anim/smart_fragment_close_enter"
+            app:popExitAnim="@anim/smart_fragment_close_exit" />
 
         <action
-            android:id="@+id/action_mainSettingsFragment_to_aboutActivity"
-            app:destination="@id/aboutActivity"
-            app:enterAnim="@anim/retro_fragment_open_enter"
-            app:exitAnim="@anim/retro_fragment_open_exit"
-            app:launchSingleTop="true"
-            app:popEnterAnim="@anim/retro_fragment_close_enter"
-            app:popExitAnim="@anim/retro_fragment_close_exit" />
+            android:id="@+id/action_mainSettingsFragment_to_imageSettingFragment"
+            app:destination="@id/imageSettingFragment"
+            app:enterAnim="@anim/smart_fragment_open_enter"
+            app:exitAnim="@anim/smart_fragment_open_exit"
+            app:popEnterAnim="@anim/smart_fragment_close_enter"
+            app:popExitAnim="@anim/smart_fragment_close_exit" />
 
         <action
-            android:id="@+id/action_mainSettingsFragment_to_backupFragment"
-            app:destination="@id/backup_fragment"
-            app:enterAnim="@anim/retro_fragment_open_enter"
-            app:exitAnim="@anim/retro_fragment_open_exit"
-            app:launchSingleTop="true"
-            app:popEnterAnim="@anim/retro_fragment_close_enter"
-            app:popExitAnim="@anim/retro_fragment_close_exit" />
+            android:id="@+id/action_mainSettingsFragment_to_nowPlayingSettingsFragment"
+            app:destination="@id/nowPlayingSettingsFragment"
+            app:enterAnim="@anim/smart_fragment_open_enter"
+            app:exitAnim="@anim/smart_fragment_open_exit"
+            app:popEnterAnim="@anim/smart_fragment_close_enter"
+            app:popExitAnim="@anim/smart_fragment_close_exit" />
+
+        <action
+            android:id="@+id/action_mainSettingsFragment_to_audioSettings"
+            app:destination="@id/audioSettings"
+            app:enterAnim="@anim/smart_fragment_open_enter"
+            app:exitAnim="@anim/smart_fragment_open_exit"
+            app:popEnterAnim="@anim/smart_fragment_close_enter"
+            app:popExitAnim="@anim/smart_fragment_close_exit" />
+
+        <action
+            android:id="@+id/action_mainSettingsFragment_to_otherSettingsFragment"
+            app:destination="@id/otherSettingsFragment"
+            app:enterAnim="@anim/smart_fragment_open_enter"
+            app:exitAnim="@anim/smart_fragment_open_exit"
+            app:popEnterAnim="@anim/smart_fragment_close_enter"
+            app:popExitAnim="@anim/smart_fragment_close_exit" />
     </fragment>
 
     <fragment
-        android:id="@+id/audioSettings"
-        android:name="mazentas.playme.music.fragments.settings.AudioSettings"
-        android:label="Audio" />
+        android:id="@+id/themeSettingsFragment"
+        android:name="mazentas.playme.music.fragments.settings.ThemeSettingsFragment"
+        android:label="Look &amp; Feel" />
+
+    <fragment
+        android:id="@+id/personalizeSettingsFragment"
+        android:name="mazentas.playme.music.fragments.settings.PersonalizeSettingsFragment"
+        android:label="Personalize" />
 
     <fragment
         android:id="@+id/imageSettingFragment"
@@ -93,28 +80,13 @@
         android:label="Now Playing" />
 
     <fragment
+        android:id="@+id/audioSettings"
+        android:name="mazentas.playme.music.fragments.settings.AudioSettings"
+        android:label="Audio" />
+
+    <fragment
         android:id="@+id/otherSettingsFragment"
         android:name="mazentas.playme.music.fragments.settings.OtherSettingsFragment"
         android:label="Other" />
-
-    <fragment
-        android:id="@+id/personalizeSettingsFragment"
-        android:name="mazentas.playme.music.fragments.settings.PersonalizeSettingsFragment"
-        android:label="Personalize" />
-
-    <fragment
-        android:id="@+id/themeSettingsFragment"
-        android:name="mazentas.playme.music.fragments.settings.ThemeSettingsFragment"
-        android:label="Look &amp; Feel" />
-
-    <fragment
-        android:id="@+id/aboutActivity"
-        android:name="mazentas.playme.music.fragments.about.AboutFragment"
-        android:label="About" />
-
-    <fragment
-        android:id="@+id/backup_fragment"
-        android:name="mazentas.playme.music.fragments.backup.BackupFragment"
-        android:label="About" />
 
 </navigation>

@@ -17,6 +17,7 @@ package mazentas.playme.music.helper.menu
 import android.view.MenuItem
 import androidx.fragment.app.FragmentActivity
 import mazentas.playme.music.R
+import mazentas.playme.music.analytics.AnalyticsHelper
 import mazentas.playme.music.dialogs.AddToPlaylistDialog
 import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.model.Genre
@@ -34,6 +35,7 @@ import org.koin.core.component.inject
 object GenreMenuHelper : KoinComponent {
     private val genreRepository by inject<GenreRepository>()
     fun handleMenuClick(activity: FragmentActivity, genre: Genre, item: MenuItem): Boolean {
+        AnalyticsHelper.logButtonClick(activity.resources.getResourceEntryName(item.itemId), "genre_menu")
         when (item.itemId) {
             R.id.action_play -> {
                 MusicPlayerRemote.openQueue(getGenreSongs(genre), 0, true)

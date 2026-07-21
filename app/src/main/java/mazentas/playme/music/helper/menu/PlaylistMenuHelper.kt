@@ -17,6 +17,7 @@ package mazentas.playme.music.helper.menu
 import android.view.MenuItem
 import androidx.fragment.app.FragmentActivity
 import mazentas.playme.music.R
+import mazentas.playme.music.analytics.AnalyticsHelper
 import mazentas.playme.music.db.PlaylistWithSongs
 import mazentas.playme.music.db.toSongs
 import mazentas.playme.music.dialogs.AddToPlaylistDialog
@@ -39,6 +40,7 @@ object PlaylistMenuHelper : KoinComponent {
         playlistWithSongs: PlaylistWithSongs,
         item: MenuItem
     ): Boolean {
+        AnalyticsHelper.logButtonClick(activity.resources.getResourceEntryName(item.itemId), "playlist_menu")
         when (item.itemId) {
             R.id.action_play -> {
                 MusicPlayerRemote.openQueue(playlistWithSongs.songs.toSongs(), 0, true)

@@ -26,6 +26,7 @@ import mazentas.playme.music.EXTRA_ARTIST_ID
 import mazentas.playme.music.R
 import mazentas.playme.music.activities.tageditor.AbsTagEditorActivity
 import mazentas.playme.music.activities.tageditor.SongTagEditorActivity
+import mazentas.playme.music.analytics.AnalyticsHelper
 import mazentas.playme.music.dialogs.AddToPlaylistDialog
 import mazentas.playme.music.dialogs.DeleteSongsDialog
 import mazentas.playme.music.dialogs.SongDetailDialog
@@ -52,6 +53,7 @@ object SongMenuHelper : KoinComponent {
         get() = R.menu.menu_item_song
 
     fun handleMenuClick(activity: FragmentActivity, song: Song, menuItemId: Int): Boolean {
+        AnalyticsHelper.logButtonClick(activity.resources.getResourceEntryName(menuItemId), "song_menu")
         val libraryViewModel = activity.getViewModel() as LibraryViewModel
         when (menuItemId) {
             R.id.action_set_as_ringtone -> {

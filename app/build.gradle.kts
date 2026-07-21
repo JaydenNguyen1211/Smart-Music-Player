@@ -5,6 +5,8 @@ plugins {
     alias(libs.plugins.google.devtools.ksp)
     id("org.jetbrains.kotlin.plugin.parcelize")
     id("org.jetbrains.kotlin.kapt")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -15,8 +17,8 @@ android {
         applicationId = "mazentas.playme.music"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.0.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
@@ -64,16 +66,6 @@ android {
         jvmTarget = "21"
     }
 
-    flavorDimensions += "distribution"
-    productFlavors {
-        create("fdroid") {
-            dimension = "distribution"
-        }
-        create("full") {
-            dimension = "distribution"
-        }
-    }
-
     dependenciesInfo {
         includeInApk = false
         includeInBundle = false
@@ -87,6 +79,11 @@ android {
 dependencies {
     implementation(project(":appthemehelper"))
     implementation(libs.gridLayout)
+
+    //Firebase
+    implementation(platform("com.google.firebase:firebase-bom:34.16.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-crashlytics")
 
     // AndroidX core
     implementation(libs.androidx.core.ktx)
@@ -159,7 +156,6 @@ dependencies {
     implementation(libs.slidableactivity)
     implementation(libs.material.intro)
     implementation(libs.fastscroll.library)
-    implementation(libs.customactivityoncrash)
     implementation(libs.tankery.circularSeekBar)
 
     // Misc

@@ -15,7 +15,6 @@ tankery_circularSeekBar_version = "1.4.2"
 retrofit_version = "3.0.0"
 afollestad_dialog_version = "3.3.0"
 coreSplashscreen = "1.0.1"
-customactivityoncrash = "2.4.0"
 fadingedgelayout = "1.0.0"
 google_featureDelivery_version = "2.1.0"
 gradle = "9.1.1"
@@ -118,7 +117,6 @@ slidableactivity = { module = "com.r0adkll:slidableactivity", version.ref = "sli
 material-intro = { module = "com.heinrichreimersoftware:material-intro", version.ref = "materialIntro" }
 dhaval2404-imagepicker = { module = "com.github.dhaval2404:imagepicker", version.ref = "dhaval2404_imagepicker_version" }
 fastscroll-library = { module = "me.zhanghai.android.fastscroll:library", version.ref = "fast_scroll_libraryVersion" }
-customactivityoncrash = { module = "cat.ereza:customactivityoncrash", version.ref = "customactivityoncrash" }
 tankery-circularSeekBar = { module = "me.tankery.lib:circularSeekBar", version.ref = "tankery_circularSeekBar_version" }
 androidx-mediarouter = { group = "androidx.mediarouter", name = "mediarouter", version.ref = "mediarouter" }
 nanohttpd = { group = "org.nanohttpd", name = "nanohttpd", version.ref = "nanohttpd" }

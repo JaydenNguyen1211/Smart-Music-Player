@@ -65,6 +65,10 @@
     </plurals>
     <string name="album_artist">Album Artist</string>
     <string name="albums">Albums</string>
+    <plurals name="albums">
+        <item quantity="one">Album</item>
+        <item quantity="other">Albums</item>
+    </plurals>
     <plurals name="albumCount">
         <item quantity="one">Album</item>
         <item quantity="other">Albums</item>

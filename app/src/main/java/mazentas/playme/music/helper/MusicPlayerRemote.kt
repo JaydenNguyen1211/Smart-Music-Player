@@ -24,6 +24,7 @@ import android.provider.DocumentsContract
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import mazentas.playme.music.R
+import mazentas.playme.music.analytics.AnalyticsHelper
 import mazentas.playme.music.extensions.showToast
 import mazentas.playme.music.model.Song
 import mazentas.playme.music.repository.SongRepository
@@ -178,6 +179,7 @@ object MusicPlayerRemote : KoinComponent {
     }
 
     fun pauseSong() {
+        AnalyticsHelper.logButtonClick("pause")
         musicService?.pause()
     }
 
@@ -185,6 +187,7 @@ object MusicPlayerRemote : KoinComponent {
      * Async
      */
     fun playNextSong() {
+        AnalyticsHelper.logButtonClick("next")
         musicService?.playNextSong(true)
     }
 
@@ -192,6 +195,7 @@ object MusicPlayerRemote : KoinComponent {
      * Async
      */
     fun playPreviousSong() {
+        AnalyticsHelper.logButtonClick("previous")
         musicService?.playPreviousSong(true)
     }
 
@@ -199,10 +203,12 @@ object MusicPlayerRemote : KoinComponent {
      * Async
      */
     fun back() {
+        AnalyticsHelper.logButtonClick("previous")
         musicService?.back(true)
     }
 
     fun resumePlaying() {
+        AnalyticsHelper.logButtonClick("play")
         musicService?.play()
     }
 
@@ -271,6 +277,7 @@ object MusicPlayerRemote : KoinComponent {
 
     fun cycleRepeatMode(): Boolean {
         if (musicService != null) {
+            AnalyticsHelper.logButtonClick("repeat")
             musicService?.cycleRepeatMode()
             return true
         }
@@ -279,6 +286,7 @@ object MusicPlayerRemote : KoinComponent {
 
     fun toggleShuffleMode(): Boolean {
         if (musicService != null) {
+            AnalyticsHelper.logButtonClick("shuffle")
             musicService?.toggleShuffle()
             return true
         }

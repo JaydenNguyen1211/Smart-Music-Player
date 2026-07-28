@@ -55,7 +55,21 @@
       "Bash(./gradlew :app:compileFullDebugKotlin --console=plain -q)",
       "Bash(./gradlew :app:compileDebugKotlin --console=plain -q)",
       "Bash(./gradlew :app:assembleDebug --console=plain -q)",
-      "Bash(adb devices *)"
+      "Bash(adb devices *)",
+      "Bash(./gradlew.bat assembleRelease --console=plain)",
+      "Bash(emulator -list-avds)",
+      "Bash(/c/Users/Admin/AppData/Local/Android/Sdk/emulator/emulator.exe *)",
+      "Bash(\"/c/Users/Admin/AppData/Local/Android/Sdk/emulator/emulator.exe\" -avd Pixel_8 -no-snapshot -no-boot-anim)",
+      "Bash(echo \"launched with pid $!\")",
+      "Bash(\"/c/Users/Admin/AppData/Local/Android/Sdk/platform-tools/adb.exe\" devices *)",
+      "Read(//d//**)",
+      "Bash($ADB install *)",
+      "Read(//c/Users/Admin/.android/**)",
+      "Read(//c/Users/Admin/AppData/Local/Android/Sdk/build-tools/**)",
+      "Bash(/c/Users/Admin/AppData/Local/Android/Sdk/platform-tools/adb.exe logcat *)",
+      "Bash(/c/Users/Admin/AppData/Local/Android/Sdk/platform-tools/adb.exe shell *)",
+      "Bash(/c/Users/Admin/AppData/Local/Android/Sdk/platform-tools/adb.exe uninstall *)",
+      "Bash(/c/Users/Admin/AppData/Local/Android/Sdk/platform-tools/adb.exe install *)"
     ]
   }
 }

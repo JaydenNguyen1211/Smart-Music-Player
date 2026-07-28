@@ -162,7 +162,11 @@ object LyricUtil {
     fun getEmbeddedSyncedLyrics(data: String): String? {
         val embeddedLyrics = try {
             AudioFileIO.read(File(data)).tagOrCreateDefault.getFirst(FieldKey.LYRICS)
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
+            // jaudiotagger's format readers (e.g. OpusFileReader) can throw
+            // ExceptionInInitializerError on Android, since Class.getPackage()
+            // returns null there unlike on a desktop JVM. That's an Error, not
+            // an Exception, so it must be caught explicitly here.
             return null
         }
         return if (AbsSynchronizedLyrics.isSynchronized(embeddedLyrics)) {

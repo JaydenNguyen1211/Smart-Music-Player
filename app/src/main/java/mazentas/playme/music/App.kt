@@ -17,6 +17,7 @@ package mazentas.playme.music
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
@@ -25,6 +26,7 @@ import code.name.monkey.appthemehelper.ThemeStore
 import code.name.monkey.appthemehelper.util.VersionUtils
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import mazentas.playme.music.analytics.AnalyticsHelper
+import mazentas.playme.music.analytics.ClickTracker
 import mazentas.playme.music.appshortcuts.DynamicShortcutManager
 import mazentas.playme.music.billing.BillingManager
 import mazentas.playme.music.helper.WallpaperAccentManager
@@ -46,6 +48,14 @@ class App : Application() {
             super.onFragmentResumed(fm, f)
             AnalyticsHelper.logScreenView(f.javaClass.simpleName, f.javaClass.name)
         }
+
+        // Dialogs live in their own window, so taps inside them need their own tracker.
+        override fun onFragmentStarted(fm: FragmentManager, f: Fragment) {
+            super.onFragmentStarted(fm, f)
+            if (f is DialogFragment) {
+                f.dialog?.window?.let { ClickTracker.attach(it, f.javaClass.simpleName) }
+            }
+        }
     }
 
     private val screenViewTracker = object : Application.ActivityLifecycleCallbacks {
@@ -57,6 +67,7 @@ class App : Application() {
         }
 
         override fun onActivityResumed(activity: Activity) {
+            ClickTracker.attach(activity.window, activity.javaClass.simpleName)
             AnalyticsHelper.logScreenView(activity.javaClass.simpleName, activity.javaClass.name)
         }
 

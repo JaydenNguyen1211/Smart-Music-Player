@@ -25,6 +25,12 @@ fun getSongInfo(song: Song): String {
             string.toString()
         } catch (er: Exception) {
             " - "
+        } catch (er: Throwable) {
+            // jaudiotagger's format readers (e.g. OpusFileReader) can throw
+            // ExceptionInInitializerError on Android, since Class.getPackage()
+            // returns null there unlike on a desktop JVM. That's an Error, not
+            // an Exception, so it must be caught explicitly here.
+            " - "
         }
     }
     return "-"

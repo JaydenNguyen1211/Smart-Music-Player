@@ -149,6 +149,8 @@ object MusicUtil : KoinComponent {
             lyrics = AudioFileIO.read(file).tagOrCreateDefault.getFirst(FieldKey.LYRICS)
         } catch (e: Exception) {
             e.printStackTrace()
+        } catch (e: Throwable) {
+            e.printStackTrace()
         }
         if (lyrics == null || lyrics.trim { it <= ' ' }.isEmpty() || AbsSynchronizedLyrics
                 .isSynchronized(lyrics)

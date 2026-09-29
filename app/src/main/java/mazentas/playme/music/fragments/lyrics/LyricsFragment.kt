@@ -203,6 +203,9 @@ class LyricsFragment : AbsMainActivityFragment(R.layout.fragment_lyrics),
         } catch (e: Exception) {
             e.printStackTrace()
             ""
+        } catch (e: Throwable) {
+            e.printStackTrace()
+            ""
         }
 
         val song = song
@@ -309,6 +312,9 @@ class LyricsFragment : AbsMainActivityFragment(R.layout.fragment_lyrics),
         val lyrics = try {
             AudioFileIO.read(file).tagOrCreateDefault.getFirst(FieldKey.LYRICS)
         } catch (e: Exception) {
+            e.printStackTrace()
+            ""
+        } catch (e: Throwable) {
             e.printStackTrace()
             ""
         }

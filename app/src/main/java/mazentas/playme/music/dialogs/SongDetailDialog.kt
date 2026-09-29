@@ -136,6 +136,18 @@ class SongDetailDialog : DialogFragment() {
                         R.string.label_track_length,
                         MusicUtil.getReadableDurationString(song.duration)
                     )
+                } catch (e: Throwable) {
+                    // jaudiotagger's format readers (e.g. OpusFileReader) can throw
+                    // ExceptionInInitializerError on Android, since Class.getPackage()
+                    // returns null there unlike on a desktop JVM. That's an Error, not
+                    // an Exception, so it must be caught explicitly here.
+                    Log.e(TAG, "error while reading the song file", e)
+                    // fallback
+                    binding.trackLength.text = makeTextWithTitle(
+                        context,
+                        R.string.label_track_length,
+                        MusicUtil.getReadableDurationString(song.duration)
+                    )
                 }
             } else {
                 // fallback

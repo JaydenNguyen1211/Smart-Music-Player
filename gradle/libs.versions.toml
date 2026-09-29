@@ -26,7 +26,6 @@ koinAndroid = "3.5.6"
 kotlinGradlePlugin = "2.2.10"
 
 kotlinxCoroutinesAndroid = "1.10.2"
-google_play_billing_version = "9.0.0"
 fast_scroll_libraryVersion = "1.2.0"
 lifecycle_version = "2.9.1"
 okhttp3_loggingInterceptor_version = "5.0.0-alpha.16"
@@ -77,7 +76,6 @@ androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref =
 google-feature-delivery = { module = "com.google.android.play:feature-delivery", version.ref = "google_featureDelivery_version" }
 google-play-services-cast-framework = { module = "com.google.android.gms:play-services-cast-framework", version.ref = "playServicesCastFramework" }
 google-play-review = { module = "com.google.android.play:review", version.ref = "google_play_review_version" }
-google-play-billing = { module = "com.android.billingclient:billing", version.ref = "google_play_billing_version" }
 
 
 #glide

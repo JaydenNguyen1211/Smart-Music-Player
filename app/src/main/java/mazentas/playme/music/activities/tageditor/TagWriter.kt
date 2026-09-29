@@ -117,6 +117,12 @@ class TagWriter {
                         e.printStackTrace()
                     } catch (e: InvalidAudioFrameException) {
                         e.printStackTrace()
+                    } catch (e: Throwable) {
+                        // jaudiotagger's format readers (e.g. OpusFileReader) can throw
+                        // ExceptionInInitializerError on Android, since Class.getPackage()
+                        // returns null there unlike on a desktop JVM. That's an Error, not
+                        // an Exception, so it must be caught explicitly here.
+                        e.printStackTrace()
                     }
                 }
                 if (wroteArtwork) {
@@ -210,6 +216,12 @@ class TagWriter {
                     } catch (e: ReadOnlyFileException) {
                         e.printStackTrace()
                     } catch (e: InvalidAudioFrameException) {
+                        e.printStackTrace()
+                    } catch (e: Throwable) {
+                        // jaudiotagger's format readers (e.g. OpusFileReader) can throw
+                        // ExceptionInInitializerError on Android, since Class.getPackage()
+                        // returns null there unlike on a desktop JVM. That's an Error, not
+                        // an Exception, so it must be caught explicitly here.
                         e.printStackTrace()
                     }
                 }

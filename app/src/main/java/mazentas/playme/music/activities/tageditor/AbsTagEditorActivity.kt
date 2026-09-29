@@ -426,6 +426,13 @@ abstract class AbsTagEditorActivity<VB : ViewBinding> : AbsBaseActivity() {
         } catch (e: Exception) {
             Log.e(TAG, "Could not read audio file $path", e)
             AudioFile()
+        } catch (e: Throwable) {
+            // jaudiotagger's format readers (e.g. OpusFileReader) can throw
+            // ExceptionInInitializerError on Android, since Class.getPackage()
+            // returns null there unlike on a desktop JVM. That's an Error, not
+            // an Exception, so it must be caught explicitly here.
+            Log.e(TAG, "Could not read audio file $path", e)
+            AudioFile()
         }
     }
 

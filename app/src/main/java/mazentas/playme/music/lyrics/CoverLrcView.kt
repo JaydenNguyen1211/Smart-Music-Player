@@ -38,10 +38,6 @@ import kotlinx.coroutines.*
 import java.io.File
 import java.lang.Runnable
 import kotlin.math.abs
-
-/**
- * 歌词 Created by wcy on 2015/11/9.
- */
 @SuppressLint("StaticFieldLeak")
 class CoverLrcView @JvmOverloads constructor(
     context: Context?,

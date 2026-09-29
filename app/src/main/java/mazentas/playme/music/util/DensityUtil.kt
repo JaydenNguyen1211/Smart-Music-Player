@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -15,10 +15,6 @@ package mazentas.playme.music.util
 
 import android.content.Context
 import android.util.TypedValue
-
-/**
- * Created by hefuyi on 16/7/30.
- */
 object DensityUtil {
     fun getScreenHeight(context: Context): Int {
         val displayMetrics = context.resources.displayMetrics

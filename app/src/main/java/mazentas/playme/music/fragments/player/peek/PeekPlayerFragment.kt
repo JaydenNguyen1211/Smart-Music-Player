@@ -29,10 +29,6 @@ import mazentas.playme.music.helper.MusicPlayerRemote
 import mazentas.playme.music.util.PreferenceUtil
 import mazentas.playme.music.util.color.MediaNotificationProcessor
 
-/**
- * Created by hemanths on 2019-10-03.
- */
-
 class PeekPlayerFragment : AbsPlayerFragment(R.layout.fragment_peek_player) {
 
     private lateinit var controlsFragment: PeekPlayerControlFragment

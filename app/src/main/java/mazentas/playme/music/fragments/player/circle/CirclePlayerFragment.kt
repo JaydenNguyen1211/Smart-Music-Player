@@ -55,10 +55,6 @@ import com.bumptech.glide.RequestBuilder
 import com.google.android.material.slider.Slider
 import me.tankery.lib.circularseekbar.CircularSeekBar
 
-/**
- * Created by hemanths on 2020-01-06.
- */
-
 class CirclePlayerFragment : AbsPlayerFragment(R.layout.fragment_circle_player), Callback,
     OnAudioVolumeChangedListener,
     CircularSeekBar.OnCircularSeekBarChangeListener {

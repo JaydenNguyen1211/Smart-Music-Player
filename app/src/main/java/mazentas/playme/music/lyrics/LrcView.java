@@ -44,10 +44,6 @@ import java.util.List;
 
 import mazentas.playme.music.BuildConfig;
 import mazentas.playme.music.R;
-
-/**
- * 歌词 Created by wcy on 2015/11/9.
- */
 @SuppressLint("StaticFieldLeak")
 public class LrcView extends View {
     private static final long ADJUST_DURATION = 0;

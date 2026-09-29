@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -20,10 +20,6 @@ import mazentas.playme.music.model.Album
 import mazentas.playme.music.model.Artist
 import mazentas.playme.music.model.Song
 import mazentas.playme.music.util.PreferenceUtil
-
-/**
- * Created by hemanths on 16/08/17.
- */
 interface LastAddedRepository {
     fun recentSongs(): List<Song>
 

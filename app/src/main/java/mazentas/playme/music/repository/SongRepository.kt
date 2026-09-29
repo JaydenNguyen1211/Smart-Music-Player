@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -34,10 +34,6 @@ import mazentas.playme.music.providers.BlacklistStore
 import mazentas.playme.music.util.PreferenceUtil
 import mazentas.playme.music.util.getExternalStoragePublicDirectory
 import java.text.Collator
-
-/**
- * Created by hemanths on 10/08/17.
- */
 interface SongRepository {
 
     fun songs(): List<Song>

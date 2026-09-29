@@ -43,10 +43,6 @@ import mazentas.playme.music.util.Share
 import mazentas.playme.music.util.color.MediaNotificationProcessor
 import com.bumptech.glide.Glide
 
-/**
- * Created by hemanths on 2020-02-02.
- */
-
 class ShareInstagramStory : AbsThemeActivity() {
 
     private lateinit var binding: ActivityShareInstagramBinding

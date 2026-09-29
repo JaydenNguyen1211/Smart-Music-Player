@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -14,10 +14,6 @@
 package mazentas.playme.music.model
 
 import kotlinx.parcelize.Parcelize
-
-/**
- * Created by hemanths on 3/4/19
- */
 @Parcelize
 class PlaylistSong(
     override val id: Long,

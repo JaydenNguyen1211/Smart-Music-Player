@@ -45,10 +45,6 @@ import kotlinx.coroutines.withContext
 import org.koin.android.ext.android.inject
 
 
-/**
- * Created by hemanths on 2020-02-02.
- */
-
 class DriveModeActivity : AbsMusicServiceActivity(), Callback {
 
     private lateinit var binding: ActivityDriveModeBinding

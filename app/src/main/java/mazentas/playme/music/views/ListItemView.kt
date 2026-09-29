@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -23,10 +23,6 @@ import mazentas.playme.music.R
 import mazentas.playme.music.databinding.ListItemViewNoCardBinding
 import mazentas.playme.music.extensions.hide
 import mazentas.playme.music.extensions.show
-
-/**
- * Created by hemanths on 2019-10-02.
- */
 class ListItemView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,

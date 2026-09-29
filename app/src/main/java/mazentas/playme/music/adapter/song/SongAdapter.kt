@@ -49,10 +49,6 @@ import mazentas.playme.music.util.color.MediaNotificationProcessor
 import com.bumptech.glide.Glide
 import me.zhanghai.android.fastscroll.PopupTextProvider
 
-/**
- * Created by hemanths on 13/08/17.
- */
-
 open class SongAdapter(
     override val activity: FragmentActivity,
     var dataSet: MutableList<Song>,

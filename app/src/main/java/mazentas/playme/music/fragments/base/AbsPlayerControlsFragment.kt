@@ -41,10 +41,6 @@ import mazentas.playme.music.util.PreferenceUtil
 import mazentas.playme.music.util.color.MediaNotificationProcessor
 import com.google.android.material.slider.Slider
 
-/**
- * Created by hemanths on 24/09/17.
- */
-
 abstract class AbsPlayerControlsFragment(@LayoutRes layout: Int) : AbsMusicServiceFragment(layout),
     MusicProgressViewUpdateHelper.Callback {
 

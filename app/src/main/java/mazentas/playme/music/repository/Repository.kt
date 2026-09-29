@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -89,7 +89,6 @@ interface Repository {
     suspend fun findSongExistInPlayCount(songId: Long): PlayCountEntity?
     suspend fun playCountSongs(): List<PlayCountEntity>
     suspend fun deleteSongs(songs: List<Song>)
-    suspend fun contributor(): List<Contributor>
     suspend fun searchArtists(query: String): List<Artist>
     suspend fun searchSongs(query: String): List<Song>
     suspend fun searchAlbums(query: String): List<Album>
@@ -111,12 +110,9 @@ class RealRepository(
     private val searchRepository: RealSearchRepository,
     private val topPlayedRepository: TopPlayedRepository,
     private val roomRepository: RoomRepository,
-    private val localDataRepository: LocalDataRepository,
 ) : Repository {
 
     override suspend fun deleteSongs(songs: List<Song>) = roomRepository.deleteSongs(songs)
-
-    override suspend fun contributor(): List<Contributor> = localDataRepository.contributors()
 
     override suspend fun searchSongs(query: String): List<Song> = songRepository.songs(query)
 

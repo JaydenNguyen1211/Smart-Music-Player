@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -26,10 +26,6 @@ import mazentas.playme.music.providers.HistoryStore
 import mazentas.playme.music.providers.SongPlayCountStore
 import mazentas.playme.music.util.PreferenceUtil
 
-
-/**
- * Created by hemanths on 16/08/17.
- */
 
 interface TopPlayedRepository {
     fun recentlyPlayedTracks(): List<Song>

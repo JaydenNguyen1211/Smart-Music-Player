@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -21,10 +21,6 @@ import mazentas.playme.music.model.Song
 import mazentas.playme.music.util.PreferenceUtil
 import java.text.Collator
 
-
-/**
- * Created by hemanths on 11/08/17.
- */
 interface AlbumRepository {
     fun albums(): List<Album>
 

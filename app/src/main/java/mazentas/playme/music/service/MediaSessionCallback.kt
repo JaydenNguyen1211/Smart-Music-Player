@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -34,10 +34,6 @@ import mazentas.playme.music.util.logD
 import mazentas.playme.music.util.logE
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-
-/**
- * Created by hemanths on 2019-08-01.
- */
 
 class MediaSessionCallback(
     private val musicService: MusicService,

@@ -34,10 +34,6 @@ import mazentas.playme.music.util.PreferenceUtil
 import mazentas.playme.music.util.color.MediaNotificationProcessor
 import android.widget.SeekBar
 
-/**
- * Created by hemanths on 2019-10-04.
- */
-
 class PeekPlayerControlFragment : AbsPlayerControlsFragment(R.layout.fragment_peek_control_player) {
 
     private var _binding: FragmentPeekControlPlayerBinding? = null

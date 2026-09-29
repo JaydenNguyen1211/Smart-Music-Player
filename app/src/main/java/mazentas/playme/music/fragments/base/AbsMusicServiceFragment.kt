@@ -25,10 +25,6 @@ import mazentas.playme.music.R
 import mazentas.playme.music.activities.base.AbsMusicServiceActivity
 import mazentas.playme.music.interfaces.IMusicServiceEventListener
 
-/**
- * Created by hemanths on 18/08/17.
- */
-
 open class AbsMusicServiceFragment(@LayoutRes layout: Int) : Fragment(layout),
     IMusicServiceEventListener {
 

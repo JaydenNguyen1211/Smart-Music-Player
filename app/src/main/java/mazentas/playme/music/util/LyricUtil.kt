@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -19,10 +19,6 @@ import mazentas.playme.music.model.lyrics.AbsSynchronizedLyrics
 import org.jaudiotagger.audio.AudioFileIO
 import org.jaudiotagger.tag.FieldKey
 import java.io.*
-
-/**
- * Created by hefuyi on 2016/11/8.
- */
 object LyricUtil {
     private val lrcRootPath =
         getExternalStorageDirectory().toString() + "/SmartMusic/lyrics/"

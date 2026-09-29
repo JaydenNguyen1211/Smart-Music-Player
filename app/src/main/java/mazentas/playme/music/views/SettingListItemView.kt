@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -21,10 +21,6 @@ import android.widget.FrameLayout
 import androidx.core.content.withStyledAttributes
 import mazentas.playme.music.R
 import mazentas.playme.music.databinding.ListSettingItemViewBinding
-
-/**
- * Created by hemanths on 2019-12-10.
- */
 class SettingListItemView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,

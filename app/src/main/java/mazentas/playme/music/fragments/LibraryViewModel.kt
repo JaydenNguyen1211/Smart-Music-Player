@@ -294,10 +294,6 @@ class LibraryViewModel(
         emit(repository.artistById(artistId))
     }
 
-    fun fetchContributors(): LiveData<List<Contributor>> = liveData(IO) {
-        emit(repository.contributor())
-    }
-
     fun observableHistorySongs(): LiveData<List<Song>> {
         viewModelScope.launch(IO) {
             repository.historySong().forEach { song ->

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -19,10 +19,6 @@ import android.content.Intent
 import android.net.Uri
 import androidx.core.content.FileProvider
 import java.io.File
-
-/**
- * Created by hemanths on 2020-02-02.
- */
 
 object Share {
     fun shareStoryToSocial(context: Context, uri: Uri) {

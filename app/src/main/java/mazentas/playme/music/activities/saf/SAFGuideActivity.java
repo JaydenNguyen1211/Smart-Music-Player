@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -23,8 +23,6 @@ import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.SimpleSlide;
 
 import mazentas.playme.music.R;
-
-/** Created by hemanths on 2019-07-31. */
 public class SAFGuideActivity extends IntroActivity {
 
   public static final int REQUEST_CODE_SAF_GUIDE = 98;

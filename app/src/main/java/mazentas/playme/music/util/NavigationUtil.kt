@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -21,32 +21,11 @@ import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import mazentas.playme.music.R
 import mazentas.playme.music.activities.DriveModeActivity
-import mazentas.playme.music.activities.LicenseActivity
-import mazentas.playme.music.activities.SupportDevelopmentActivity
 import mazentas.playme.music.activities.WhatsNewFragment
-import mazentas.playme.music.activities.bugreport.BugReportActivity
 import mazentas.playme.music.extensions.showToast
 import mazentas.playme.music.helper.MusicPlayerRemote.audioSessionId
 
 object NavigationUtil {
-    fun bugReport(activity: Activity) {
-        activity.startActivity(
-            Intent(activity, BugReportActivity::class.java), null
-        )
-    }
-
-    fun goToOpenSource(activity: Activity) {
-        activity.startActivity(
-            Intent(activity, LicenseActivity::class.java), null
-        )
-    }
-
-    fun goToSupportDevelopment(activity: Activity) {
-        activity.startActivity(
-            Intent(activity, SupportDevelopmentActivity::class.java), null
-        )
-    }
-
     fun gotoDriveMode(activity: Activity) {
         activity.startActivity(
             Intent(activity, DriveModeActivity::class.java), null

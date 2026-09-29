@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -28,10 +28,6 @@ import mazentas.playme.music.extensions.getString
 import mazentas.playme.music.extensions.getStringOrNull
 import mazentas.playme.music.model.PlaylistSong
 import mazentas.playme.music.model.Song
-
-/**
- * Created by hemanths on 16/08/17.
- */
 @Suppress("Deprecation")
 object PlaylistSongsLoader {
 

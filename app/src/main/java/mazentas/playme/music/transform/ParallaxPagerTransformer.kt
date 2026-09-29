@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -16,10 +16,6 @@ package mazentas.playme.music.transform
 
 import android.view.View
 import androidx.viewpager.widget.ViewPager
-
-/**
- * Created by xgc1986 on 2/Apr/2016
- */
 
 class ParallaxPagerTransformer(private val id: Int) : ViewPager.PageTransformer {
     private var speed = 0.2f

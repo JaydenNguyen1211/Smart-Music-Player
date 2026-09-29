@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -18,10 +18,6 @@ import android.content.Context
 import android.util.AttributeSet
 
 import com.google.android.material.card.MaterialCardView
-
-/**
- * Created by hemanths on 3/18/19
- */
 class WidthFitSquareCardView : MaterialCardView {
 
     constructor(context: Context) : super(context)

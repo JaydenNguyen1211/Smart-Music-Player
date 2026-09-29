@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -15,10 +15,6 @@
 package mazentas.playme.music.auto;
 
 import androidx.annotation.NonNull;
-
-/**
- * Created by Beesham Sarendranauth (Beesham)
- */
 public class AutoMediaIDHelper {
 
     // Media IDs used on browseable items of MediaBrowser

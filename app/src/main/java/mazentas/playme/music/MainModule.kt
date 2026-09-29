@@ -96,7 +96,6 @@ private val dataModule = module {
             get(),
             get(),
             get(),
-            get(),
         )
     } bind Repository::class
 
@@ -141,9 +140,6 @@ private val dataModule = module {
             get()
         )
     }
-    single {
-        RealLocalDataRepository(get())
-    } bind LocalDataRepository::class
 }
 
 private val viewModules = module {

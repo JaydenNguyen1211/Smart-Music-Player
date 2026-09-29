@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Hemanth Savarala.
+ * Copyright (c) 2026 Playme Team.
  *
  * Licensed under the GNU General Public License v3
  *
@@ -26,10 +26,6 @@ import mazentas.playme.music.util.MusicUtil
 import mazentas.playme.music.util.PreferenceUtil
 import java.lang.ref.WeakReference
 
-
-/**
- * Created by Beesham Sarendranauth (Beesham)
- */
 class AutoMusicProvider(
     private val mContext: Context,
     private val songsRepository: SongRepository,
